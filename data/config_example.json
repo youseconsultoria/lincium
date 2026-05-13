@@ -1,0 +1,9 @@
+{
+  "empresa_cnpj": "00.000.000/0001-00",
+  "empresa_nome": "NOME DA EMPRESA LTDA",
+  "cod_banco_principal": "1000",
+  "cod_duplicatas_receber": "500",
+  "cod_despesas_bancarias": "370",
+  "cod_juros_passivos": "368",
+  "cod_impostos": "350"
+}

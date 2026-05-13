@@ -1,0 +1,33 @@
+# Parsers de documentos
+pdfplumber>=0.11.0
+ofxtools>=0.9.0
+
+# Matching e NLP
+rapidfuzz>=3.0.0
+
+# SEFAZ (NF-e XML) — v2
+lxml>=5.0.0
+zeep>=4.2.0
+
+# Banco de dados
+pyodbc>=5.0.0
+psycopg2-binary>=2.9.0
+SQLAlchemy>=2.0.0
+
+# Interface web
+fastapi>=0.110.0
+uvicorn>=0.29.0
+jinja2>=3.1.0
+python-multipart>=0.0.9
+
+# Autenticação Auth0
+python-jose[cryptography]>=3.3.0
+httpx>=0.27.0
+authlib>=1.3.0
+
+# Utilitários
+python-dotenv>=1.0.0
+itsdangerous>=2.1.0
+
+# Testes
+pytest>=8.0.0

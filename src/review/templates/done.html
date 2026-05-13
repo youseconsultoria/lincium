@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Arquivo gerado — Lincium{% endblock %}
+{% block header_meta %}{{ empresa }} · {{ periodo }}{% endblock %}
+
+{% block body %}
+<main style="display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 56px);">
+  <div style="text-align:center;max-width:500px;padding:40px 32px;">
+    <div style="font-size:52px;margin-bottom:16px;">✅</div>
+    <h1 style="font-size:24px;font-weight:700;margin-bottom:10px;">
+      Arquivo gerado com sucesso
+    </h1>
+    <p style="color:var(--muted);margin-bottom:28px;line-height:1.7;">
+      {% if updated > 0 %}
+        <strong style="color:var(--text)">{{ updated }}</strong>
+        lançamento{{ "s" if updated > 1 }} confirmado{{ "s" if updated > 1 }} manualmente.<br>
+      {% endif %}
+      <strong style="color:var(--laranja)">{{ total_auto }}</strong>
+      lançamentos prontos para importação no Domínio.
+    </p>
+
+    {% if remaining > 0 %}
+    <div class="toast toast-warn" style="text-align:left;margin-bottom:24px;">
+      ⚠ <strong>{{ remaining }}</strong> lançamento{{ "s" if remaining > 1 }}
+      sem conta definida — <strong>não</strong> incluído{{ "s" if remaining > 1 }} no arquivo.
+    </div>
+    {% endif %}
+
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      {% if download_ready %}
+      <a href="/download" class="btn btn-green">⬇ Baixar arquivo Domínio</a>
+      {% endif %}
+      {% if remaining > 0 %}
+      <a href="/" class="btn btn-primary">Continuar revisão →</a>
+      {% else %}
+      <a href="/" class="btn btn-ghost">← Voltar</a>
+      {% endif %}
+    </div>
+  </div>
+</main>
+{% endblock %}

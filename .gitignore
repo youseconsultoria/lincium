@@ -1,0 +1,22 @@
+# Credenciais — nunca commitar
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Dados de clientes (nunca commitar)
+output/
+data/*.json
+!data/*example*.json
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Lincium{% endblock %}</title>
+  <style>
+    @font-face {
+      font-family: 'Saira';
+      src: url('/static/fonts/Saira.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Paleta oficial */
+      --laranja:        #ee702f;
+      --laranja-escuro: #c55a20;
+      --laranja-medio:  #f5b994;
+      --laranja-fundo:  #2a1a0f;
+      --azul-profundo:  #090d16;
+      --bg-sidebar:     #0f1520;
+      --card:           #161e30;
+      --hover:          #253354;
+      --muted:          #7b8db0;
+      --texto:          #e8edf5;
+
+      /* Mapeamento semântico */
+      --bg:       var(--azul-profundo);
+      --surface:  var(--bg-sidebar);
+      --surface2: var(--card);
+      --border:   var(--hover);
+      --accent:   var(--laranja);
+      --accent-hover: var(--laranja-escuro);
+      --text:     var(--texto);
+      --green:    #22c55e;
+      --yellow:   #f59e0b;
+      --red:      #ef4444;
+      --font:     'Saira', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* ─── Header ─── */
+    .header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-mark {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 16px; color: #fff;
+    }
+    .logo-text { font-weight: 700; font-size: 16px; letter-spacing: .03em; }
+    .logo-sub { color: var(--muted); font-size: 12px; font-weight: 400; }
+    .header-meta { color: var(--muted); font-size: 13px; }
+    .header-user { display: flex; align-items: center; gap: 12px; }
+    .header-user-name { font-size: 13px; color: var(--muted); }
+    .btn-logout {
+      padding: 5px 12px; border-radius: 6px; border: 1px solid var(--border);
+      background: transparent; color: var(--muted); font-family: var(--font);
+      font-size: 12px; cursor: pointer; text-decoration: none;
+      transition: background .15s, color .15s;
+    }
+    .btn-logout:hover { background: var(--surface2); color: var(--text); }
+
+    /* ─── Stats bar ─── */
+    .stats-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .stat { display: flex; flex-direction: column; }
+    .stat-value { font-size: 22px; font-weight: 700; }
+    .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+    .stat-value.green  { color: var(--green); }
+    .stat-value.orange { color: var(--accent); }
+    .stat-value.muted  { color: var(--muted); }
+
+    .progress-bar-wrap { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; min-width: 80px; }
+    .progress-bar { height: 100%; background: var(--accent); border-radius: 3px; transition: width .4s ease; }
+
+    /* ─── Buttons ─── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 18px; border-radius: 8px; border: none;
+      font-family: var(--font); font-size: 13px; font-weight: 600;
+      cursor: pointer; text-decoration: none;
+      transition: background .15s, transform .1s;
+    }
+    .btn:active { transform: scale(.97); }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+    .btn-ghost:hover { background: var(--surface2); color: var(--text); }
+    .btn-green { background: var(--green); color: #000; font-weight: 700; }
+    .btn-green:hover { background: #16a34a; }
+    .btn-danger { background: var(--red); color: #fff; }
+
+    /* ─── Inputs ─── */
+    input[type="text"], select {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 7px 10px;
+      border-radius: 6px;
+      font-family: var(--font);
+      font-size: 13px;
+      outline: none;
+    }
+    input[type="text"]:focus, select:focus { border-color: var(--accent); }
+
+    /* ─── Badges ─── */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .04em;
+    }
+    .badge-debit  { background: rgba(239,68,68,.15);    color: var(--red); }
+    .badge-credit { background: rgba(34,197,94,.15);    color: var(--green); }
+    .badge-auto   { background: rgba(238,112,47,.15);   color: var(--accent); }
+
+    /* ─── Toast ─── */
+    .toast { padding: 10px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 16px; }
+    .toast-warn { background: rgba(238,112,47,.12); border: 1px solid var(--accent); color: var(--texto); }
+    .toast-info { background: rgba(91,108,255,.12); border: 1px solid #5b6cff;       color: var(--texto); }
+
+    /* ─── Main ─── */
+    main { max-width: 1200px; margin: 0 auto; padding: 24px; }
+  </style>
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <div class="logo-mark">L</div>
+      <div>
+        <div class="logo-text">Lincium</div>
+        <div class="logo-sub">Conciliação Contábil</div>
+      </div>
+    </div>
+    <div class="header-user">
+      <div class="header-meta">{% block header_meta %}{% endblock %}</div>
+      {% if user %}
+      <span class="header-user-name">{{ user.name or user.email }}</span>
+      <a href="/logout" class="btn-logout">Sair</a>
+      {% endif %}
+    </div>
+  </header>
+  {% block body %}{% endblock %}
+</body>
+</html>

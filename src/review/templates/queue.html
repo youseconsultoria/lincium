@@ -1,0 +1,424 @@
+{% extends "base.html" %}
+
+{% block title %}Fila de Revisão — Lincium{% endblock %}
+{% block header_meta %}{{ empresa }} · {{ periodo }}{% endblock %}
+
+{% block head %}
+<style>
+  /* ─── Group cards ─── */
+  .group-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: border-color .2s;
+  }
+  .group-card.resolved { border-color: rgba(238,112,47,.35); }
+
+  .group-header {
+    display: flex; align-items: center; gap: 12px;
+    padding: 13px 16px;
+    cursor: pointer; user-select: none;
+  }
+  .group-header:hover { background: rgba(255,255,255,.02); }
+
+  .group-toggle { color: var(--muted); font-size: 10px; transition: transform .2s; flex-shrink: 0; }
+  .group-toggle.open { transform: rotate(90deg); }
+
+  .group-desc { flex: 1; min-width: 0; }
+  .group-title {
+    font-weight: 600; font-size: 13px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .group-subtitle { color: var(--muted); font-size: 12px; margin-top: 1px; }
+
+  .group-meta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .group-count {
+    font-size: 11px; color: var(--muted);
+    background: var(--surface2); padding: 2px 8px; border-radius: 20px;
+  }
+  .group-total { font-weight: 700; font-size: 14px; min-width: 110px; text-align: right; }
+
+  /* ─── Account selector ─── */
+  .group-selector {
+    padding: 10px 16px;
+    background: var(--surface2);
+    border-top: 1px solid var(--border);
+    display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap;
+  }
+  .group-selector label { font-size: 12px; color: var(--muted); white-space: nowrap; padding-top: 8px; }
+
+  .select-wrap { flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 4px; }
+  .search-input { width: 100%; }
+  .group-select { width: 100%; cursor: pointer; }
+
+  /* Feedback chip — conta selecionada */
+  .selected-chip {
+    display: none;
+    align-items: center; gap: 6px;
+    background: rgba(238,112,47,.12);
+    border: 1px solid rgba(238,112,47,.3);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px; color: var(--laranja-medio);
+    font-weight: 600;
+  }
+  .selected-chip.visible { display: flex; }
+  .selected-chip .chip-code {
+    background: var(--accent); color: #fff;
+    border-radius: 4px; padding: 1px 6px; font-size: 11px; font-weight: 700;
+  }
+
+  /* ─── Transaction detail table ─── */
+  .group-detail { display: none; border-top: 1px solid var(--border); }
+  .group-detail.open { display: block; }
+
+  .tx-table { width: 100%; border-collapse: collapse; }
+  .tx-table th {
+    padding: 7px 16px; text-align: left;
+    font-size: 11px; color: var(--muted); font-weight: 600;
+    text-transform: uppercase; letter-spacing: .05em;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+  }
+  .tx-table td {
+    padding: 7px 16px; font-size: 12px;
+    border-bottom: 1px solid rgba(37,51,84,.5);
+  }
+  .tx-table tr:last-child td { border-bottom: none; }
+  .tx-table .amount { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+  .tx-table .date   { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  /* ─── Footer ─── */
+  .footer-bar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--surface); border-top: 1px solid var(--border);
+    padding: 13px 24px;
+    display: flex; align-items: center; justify-content: flex-end;
+    gap: 12px; z-index: 100;
+  }
+  .footer-info { flex: 1; color: var(--muted); font-size: 13px; }
+  main { padding-bottom: 80px; }
+
+  /* ─── Section heading ─── */
+  .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+  .section-title { font-size: 15px; font-weight: 700; }
+  .section-subtitle { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  /* ─── Confirm modal ─── */
+  dialog {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+    max-width: 460px;
+    width: 90%;
+    color: var(--text);
+    font-family: var(--font);
+  }
+  dialog::backdrop { background: rgba(9,13,22,.8); backdrop-filter: blur(4px); }
+  .modal-icon { font-size: 36px; margin-bottom: 12px; }
+  .modal-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+  .modal-body  { font-size: 13px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+  .modal-body strong { color: var(--text); }
+  .modal-input-wrap { margin-bottom: 20px; }
+  .modal-input-wrap label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  #confirm-word {
+    width: 100%; font-size: 14px; font-weight: 600;
+    border: 2px solid var(--border);
+    letter-spacing: .05em;
+  }
+  #confirm-word.valid { border-color: var(--accent); }
+  .modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+</style>
+{% endblock %}
+
+{% block body %}
+<!-- Stats bar -->
+<div class="stats-bar">
+  <div class="stat">
+    <span class="stat-value green">{{ auto_count }}</span>
+    <span class="stat-label">Automáticos</span>
+  </div>
+  <div class="stat">
+    <span class="stat-value orange">{{ review_count }}</span>
+    <span class="stat-label">Grupos p/ revisar</span>
+  </div>
+  <div class="stat">
+    <span class="stat-value muted">{{ total_count }}</span>
+    <span class="stat-label">Total de lançamentos</span>
+  </div>
+  <div style="flex:1; display:flex; align-items:center; gap:10px;">
+    <div class="progress-bar-wrap">
+      <div class="progress-bar" id="prog-bar"
+           style="width: {{ (auto_count / total_count * 100)|round(1) }}%"></div>
+    </div>
+    <span style="color:var(--muted);font-size:12px;white-space:nowrap;" id="prog-label">
+      {{ (auto_count / total_count * 100)|round(1) }}% automático
+    </span>
+  </div>
+</div>
+
+<main>
+  <div class="section-head">
+    <div>
+      <div class="section-title">⚠ Lançamentos para Revisão</div>
+      <div class="section-subtitle">
+        Selecione a conta contábil para cada grupo.
+        Transações com a mesma descrição + beneficiário são agrupadas.
+      </div>
+    </div>
+  </div>
+
+  <form method="post" action="/confirm" id="review-form">
+    {% for group in groups %}
+    <div class="group-card" id="card-{{ loop.index }}">
+      <div class="group-header" onclick="toggleDetail({{ loop.index }})">
+        <span class="group-toggle" id="toggle-{{ loop.index }}">▶</span>
+        <div class="group-desc">
+          <div class="group-title">{{ group.description }}</div>
+          {% if group.beneficiary %}
+          <div class="group-subtitle">{{ group.beneficiary }}</div>
+          {% endif %}
+        </div>
+        <div class="group-meta">
+          <span class="badge {% if group.is_debit %}badge-debit{% else %}badge-credit{% endif %}">
+            {{ "D" if group.is_debit else "C" }}
+          </span>
+          <span class="group-count">
+            {{ group.transactions|length }}
+            lançamento{{ "s" if group.transactions|length > 1 }}
+          </span>
+          <span class="group-total">{{ group.total | brl }}</span>
+        </div>
+      </div>
+
+      <div class="group-selector">
+        <label>Conta:</label>
+        <div class="select-wrap">
+          <input type="text"
+                 class="search-input"
+                 placeholder="Buscar conta..."
+                 data-target="sel-{{ loop.index }}"
+                 autocomplete="off">
+          <select class="group-select" id="sel-{{ loop.index }}"
+                  name="group_{{ group.key }}"
+                  data-is-debit="{{ 'true' if group.is_debit else 'false' }}"
+                  data-preselect="{{ group.cod_deb if group.is_debit else group.cod_cred }}"
+                  data-card="{{ loop.index }}"
+                  onchange="onAccountSelect(this)">
+            <option value="">— selecione —</option>
+          </select>
+          <!-- Chip de feedback: exibe conta selecionada -->
+          <div class="selected-chip" id="chip-{{ loop.index }}">
+            <span class="chip-code" id="chip-code-{{ loop.index }}"></span>
+            <span id="chip-name-{{ loop.index }}"></span>
+          </div>
+        </div>
+        {% if group.review_reason %}
+        <span style="color:var(--muted);font-size:11px;padding-top:8px;">{{ group.review_reason }}</span>
+        {% endif %}
+      </div>
+
+      <div class="group-detail" id="detail-{{ loop.index }}">
+        <table class="tx-table">
+          <thead>
+            <tr><th>Data</th><th>Descrição</th><th>Doc</th><th class="amount">Valor</th></tr>
+          </thead>
+          <tbody>
+            {% for r in group.transactions %}
+            <tr>
+              <td class="date">{{ r.transaction.date.strftime("%d/%m/%Y") }}</td>
+              <td>{{ r.transaction.raw_description }}</td>
+              <td style="color:var(--muted)">{{ r.transaction.doc_number or "—" }}</td>
+              <td class="amount">{{ r.transaction.amount | brl }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endfor %}
+
+    <!-- Footer -->
+    <div class="footer-bar">
+      <div class="footer-info" id="footer-info">
+        <span id="resolved-count">0</span> de {{ review_count }} grupos resolvidos
+      </div>
+      <a href="/download" class="btn btn-ghost">⬇ Versão atual</a>
+      <button type="button" class="btn btn-primary" onclick="requestConfirm()">
+        Gerar Arquivo →
+      </button>
+    </div>
+  </form>
+</main>
+
+<!-- Modal de confirmação com lançamentos faltando -->
+<dialog id="confirm-dialog">
+  <div class="modal-icon">⚠️</div>
+  <div class="modal-title">Lançamentos sem conta atribuída</div>
+  <div class="modal-body" id="modal-body">
+    <strong id="missing-count"></strong> lançamentos ainda não foram mapeados
+    e <strong>não serão incluídos</strong> no arquivo de importação.<br><br>
+    Para prosseguir mesmo assim, confirme abaixo.
+  </div>
+  <div class="modal-input-wrap">
+    <label>Digite <strong>"Confirmo"</strong> para liberar o arquivo parcial:</label>
+    <input type="text" id="confirm-word" placeholder="Confirmo"
+           oninput="checkConfirmWord()" autocomplete="off">
+  </div>
+  <div class="modal-actions">
+    <button type="button" class="btn btn-ghost" onclick="document.getElementById('confirm-dialog').close()">
+      Cancelar — continuar revisão
+    </button>
+    <button type="button" class="btn btn-primary" id="modal-submit-btn"
+            disabled onclick="submitForm()">
+      Confirmar e gerar →
+    </button>
+  </div>
+</dialog>
+
+<script>
+// ─── Plano de contas (JSON único) ───
+const CONTAS = [
+  {% for conta in contas %}
+  {"cod": "{{ conta.cod_reduzido }}", "nome": {{ conta.nome | tojson }}, "classif": "{{ conta.classif[:3] }}"},
+  {% endfor %}
+];
+const GROUP_LABELS = {
+  "1.1": "Ativo Circulante", "1.2": "Ativo Não Circulante",
+  "2.1": "Passivo Circulante", "2.2": "Passivo Não Circulante",
+  "3.1": "Receitas", "4.1": "Custos", "4.2": "Despesas",
+  "4.3": "Desp. Não Operacionais"
+};
+const BANCO = "1843";
+const TOTAL_GROUPS = {{ review_count }};
+
+// ─── Popula select com optgroups ───
+function populateSelect(sel) {
+  const isDebit = sel.dataset.isDebit === "true";
+  const pre = sel.dataset.preselect || "";
+  sel.innerHTML = '<option value="">— selecione —</option>';
+  let lastGrp = "", og = null;
+  CONTAS.forEach(c => {
+    if (c.classif !== lastGrp) {
+      og = document.createElement("optgroup");
+      og.label = GROUP_LABELS[c.classif] || c.classif;
+      sel.appendChild(og);
+      lastGrp = c.classif;
+    }
+    const opt = document.createElement("option");
+    opt.value   = isDebit ? `${c.cod}:${BANCO}` : `${BANCO}:${c.cod}`;
+    opt.dataset.cod  = c.cod;
+    opt.dataset.nome = c.nome;
+    opt.textContent = `${c.cod} — ${c.nome}`;
+    if (c.cod === pre) opt.selected = true;
+    (og || sel).appendChild(opt);
+  });
+  // Atualiza chip se já tiver seleção pré-definida
+  if (pre) {
+    const matched = CONTAS.find(c => c.cod === pre);
+    if (matched) updateChip(sel, pre, matched.nome);
+  }
+}
+
+// ─── Filtro de busca ───
+document.querySelectorAll('.search-input').forEach(inp => {
+  inp.addEventListener('input', () => {
+    const q = inp.value.toLowerCase();
+    const sel = document.getElementById(inp.dataset.target);
+    Array.from(sel.options).forEach(opt => {
+      if (!opt.value) return;
+      opt.style.display = opt.text.toLowerCase().includes(q) ? "" : "none";
+    });
+    Array.from(sel.querySelectorAll('optgroup')).forEach(og => {
+      const hasVisible = Array.from(og.querySelectorAll('option'))
+        .some(o => o.style.display !== "none");
+      og.style.display = hasVisible ? "" : "none";
+    });
+  });
+});
+
+// ─── Feedback de conta selecionada ───
+function updateChip(sel, cod, nome) {
+  const idx = sel.dataset.card;
+  const chip = document.getElementById(`chip-${idx}`);
+  const codEl = document.getElementById(`chip-code-${idx}`);
+  const nameEl = document.getElementById(`chip-name-${idx}`);
+  if (cod) {
+    codEl.textContent = cod;
+    nameEl.textContent = nome;
+    chip.classList.add('visible');
+    document.getElementById(`card-${idx}`).classList.add('resolved');
+  } else {
+    chip.classList.remove('visible');
+    document.getElementById(`card-${idx}`).classList.remove('resolved');
+  }
+}
+
+let resolvedCount = 0;
+function onAccountSelect(sel) {
+  const opt = sel.options[sel.selectedIndex];
+  if (opt && opt.value) {
+    updateChip(sel, opt.dataset.cod, opt.dataset.nome);
+    // Limpa campo de busca
+    const searchInput = sel.closest('.select-wrap').previousElementSibling.nextElementSibling;
+    const inp = sel.previousElementSibling;
+    if (inp && inp.classList.contains('search-input')) inp.value = '';
+    // Restaura visibilidade de todas as opções
+    Array.from(sel.querySelectorAll('option,optgroup')).forEach(el => el.style.display = '');
+  } else {
+    updateChip(sel, '', '');
+  }
+  updateResolvedCount();
+}
+
+function updateResolvedCount() {
+  const selects = document.querySelectorAll('.group-select');
+  let resolved = 0;
+  selects.forEach(s => { if (s.value) resolved++; });
+  resolvedCount = resolved;
+  document.getElementById('resolved-count').textContent = resolved;
+  const pct = Math.round({{ auto_count }} / {{ total_count }} * 100 + resolved / TOTAL_GROUPS * {{ review_count }} / {{ total_count }} * 100);
+}
+
+// ─── Toggle detalhe de lançamentos ───
+function toggleDetail(idx) {
+  const el  = document.getElementById(`detail-${idx}`);
+  const tog = document.getElementById(`toggle-${idx}`);
+  const open = el.classList.toggle('open');
+  tog.classList.toggle('open', open);
+}
+
+// ─── Lógica do botão Gerar ───
+function requestConfirm() {
+  const selects = document.querySelectorAll('.group-select');
+  const missing = Array.from(selects).filter(s => !s.value).length;
+  if (missing === 0) {
+    submitForm();
+  } else {
+    document.getElementById('missing-count').textContent = missing;
+    document.getElementById('confirm-word').value = '';
+    document.getElementById('modal-submit-btn').disabled = true;
+    document.getElementById('confirm-dialog').showModal();
+  }
+}
+
+function checkConfirmWord() {
+  const val = document.getElementById('confirm-word').value.trim().toLowerCase();
+  const ok = val === 'confirmo';
+  document.getElementById('confirm-word').classList.toggle('valid', ok);
+  document.getElementById('modal-submit-btn').disabled = !ok;
+}
+
+function submitForm() {
+  document.getElementById('confirm-dialog').close();
+  document.getElementById('review-form').submit();
+}
+
+// ─── Init ───
+document.querySelectorAll('.group-select').forEach(populateSelect);
+updateResolvedCount();
+</script>
+{% endblock %}
