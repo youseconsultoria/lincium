@@ -13,7 +13,7 @@ build/
 venv/
 
 # Dados de clientes (nunca commitar)
-output/
+/output/
 data/*.json
 !data/*example*.json
 
