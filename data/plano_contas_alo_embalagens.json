@@ -1,0 +1,6006 @@
+{
+  "empresa_cnpj": "04744695000177",
+  "empresa_nome": "ALO EMBALAGENS LTDA",
+  "contas": [
+    {
+      "cod_reduzido": "1",
+      "nome": "ATIVO",
+      "natureza": "D",
+      "classif": "1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2",
+      "nome": "ATIVO CIRCULANTE",
+      "natureza": "D",
+      "classif": "1.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "3",
+      "nome": "CAIXA E EQUIVALENTES DE CAIXA",
+      "natureza": "D",
+      "classif": "1.1.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "4",
+      "nome": "CAIXA",
+      "natureza": "D",
+      "classif": "1.1.1.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "5",
+      "nome": "CAIXA",
+      "natureza": "D",
+      "classif": "1.1.1.01.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "7",
+      "nome": "BANCOS CONTA MOVIMENTO",
+      "natureza": "D",
+      "classif": "1.1.1.02",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "8",
+      "nome": "BANCO SICOOB OURO VERDE",
+      "natureza": "D",
+      "classif": "1.1.1.02.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1831",
+      "nome": "BANCO DO BRASIL",
+      "natureza": "D",
+      "classif": "1.1.1.02.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1843",
+      "nome": "BANCO SANTANDER - CC 13.000641-6",
+      "natureza": "D",
+      "classif": "1.1.1.02.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2018",
+      "nome": "BANCO SICREDI",
+      "natureza": "D",
+      "classif": "1.1.1.02.009",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "10",
+      "nome": "APLICACOES FINANCEIRAS COM LIQUIDEZ IMEDIATA",
+      "natureza": "D",
+      "classif": "1.1.1.03",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "11",
+      "nome": "SANTANDER CONTAMAX EMPRESARIAL",
+      "natureza": "D",
+      "classif": "1.1.1.03.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1844",
+      "nome": "CDB/RDB - SANTANDER",
+      "natureza": "D",
+      "classif": "1.1.1.03.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2019",
+      "nome": "CONTA CAPITAL - SICREDI",
+      "natureza": "D",
+      "classif": "1.1.1.03.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "12",
+      "nome": "CLIENTES",
+      "natureza": "D",
+      "classif": "1.1.2",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "13",
+      "nome": "DUPLICATAS A RECEBER",
+      "natureza": "D",
+      "classif": "1.1.2.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "504",
+      "nome": "DUPLICATAS A RECEBER",
+      "natureza": "D",
+      "classif": "1.1.2.01.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "18",
+      "nome": "OUTROS CREDITOS",
+      "natureza": "D",
+      "classif": "1.1.3",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "20",
+      "nome": "TITULOS A RECEBER",
+      "natureza": "D",
+      "classif": "1.1.3.02",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "685",
+      "nome": "TITULOS A RECEBER",
+      "natureza": "D",
+      "classif": "1.1.3.02.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "23",
+      "nome": "ADIANTAMENTOS A FORNECEDORES",
+      "natureza": "D",
+      "classif": "1.1.3.05",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "555",
+      "nome": "ADIANTAMENTO DE FORNECEDORES",
+      "natureza": "D",
+      "classif": "1.1.3.05.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "24",
+      "nome": "ADIANTAMENTO A EMPREGADOS",
+      "natureza": "D",
+      "classif": "1.1.3.06",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "25",
+      "nome": "ADIANTAMENTO DE SALARIAL",
+      "natureza": "D",
+      "classif": "1.1.3.06.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "26",
+      "nome": "ADIANTAMENTO DE 13 SALARIO",
+      "natureza": "D",
+      "classif": "1.1.3.06.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "565",
+      "nome": "ADIANTAMENTO DE FERIAS",
+      "natureza": "D",
+      "classif": "1.1.3.06.003",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "168",
+      "nome": "ADIANTAMENTO DE RESCISAO",
+      "natureza": "D",
+      "classif": "1.1.3.06.005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "28",
+      "nome": "TRIBUTOS A RECUPERAR/COMPENSAR",
+      "natureza": "D",
+      "classif": "1.1.3.08",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "30",
+      "nome": "ICMS A RECUPERAR",
+      "natureza": "D",
+      "classif": "1.1.3.08.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "31",
+      "nome": "IRRF A RECUPERAR",
+      "natureza": "D",
+      "classif": "1.1.3.08.003",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2212",
+      "nome": "PIS A RECUPERAR",
+      "natureza": "D",
+      "classif": "1.1.3.08.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "36",
+      "nome": "COFINS RECUPERAR",
+      "natureza": "D",
+      "classif": "1.1.3.08.008",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "38",
+      "nome": "INSS A COMPENSAR",
+      "natureza": "D",
+      "classif": "1.1.3.08.010",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "593",
+      "nome": "ADIANTAMENTO A SOCIOS",
+      "natureza": "D",
+      "classif": "1.1.3.10",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "594",
+      "nome": "ADIANTAMENTO A SOCIOS",
+      "natureza": "D",
+      "classif": "1.1.3.10.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "53",
+      "nome": "ESTOQUE",
+      "natureza": "D",
+      "classif": "1.1.5",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "54",
+      "nome": "MERCADORIAS, PRODUTOS E INSUMOS",
+      "natureza": "D",
+      "classif": "1.1.5.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "55",
+      "nome": "MERCADORIAS PARA REVENDA",
+      "natureza": "D",
+      "classif": "1.1.5.01.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "501",
+      "nome": "ATIVO NAO-CIRCULANTE",
+      "natureza": "D",
+      "classif": "1.2",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "111",
+      "nome": "IMOBILIZADO",
+      "natureza": "D",
+      "classif": "1.2.4",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "118",
+      "nome": "MAQUINAS, EQUIPAMENTOS E FERRAMENTAS",
+      "natureza": "D",
+      "classif": "1.2.4.03",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "119",
+      "nome": "MAQUINAS E EQUIPAMENTOS",
+      "natureza": "D",
+      "classif": "1.2.4.03.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "120",
+      "nome": "VEICULOS",
+      "natureza": "D",
+      "classif": "1.2.4.04",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "121",
+      "nome": "VEICULOS",
+      "natureza": "D",
+      "classif": "1.2.4.04.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "125",
+      "nome": "(-) DEPRECIACOES, AMORTIZACOES E EXAUSTOES ACUMULADAS",
+      "natureza": "D",
+      "classif": "1.2.4.07",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "128",
+      "nome": "(-) DEPRECIACOES DE MAQUINAS E EQUIPAMENTOS",
+      "natureza": "D",
+      "classif": "1.2.4.07.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "85",
+      "nome": "(-) DEPREC. COMPUTADORES E PERIFERICOS",
+      "natureza": "D",
+      "classif": "1.2.4.07.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "129",
+      "nome": "(-) DEPRECIACOES DE VEICULOS",
+      "natureza": "D",
+      "classif": "1.2.4.07.006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "502",
+      "nome": "INTANGIVEL",
+      "natureza": "D",
+      "classif": "1.2.5",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1473",
+      "nome": "(-) AMORTIZAÇÕES ACUMULADAS",
+      "natureza": "D",
+      "classif": "1.2.5.02",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "131",
+      "nome": "(-) AMORTIZACAO DE MARCAS, DIREITOS E PATENTES",
+      "natureza": "D",
+      "classif": "1.2.5.02.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "149",
+      "nome": "PASSIVO",
+      "natureza": "D",
+      "classif": "2",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "150",
+      "nome": "PASSIVO CIRCULANTE",
+      "natureza": "C",
+      "classif": "2.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "382",
+      "nome": "EMPRESTIMOS E FINANCIAMENTOS",
+      "natureza": "C",
+      "classif": "2.1.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "151",
+      "nome": "EMPRESTIMOS",
+      "natureza": "C",
+      "classif": "2.1.1.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "152",
+      "nome": "SALDO BANCÁRIO SICOOB",
+      "natureza": "C",
+      "classif": "2.1.1.01.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1322",
+      "nome": "EMPRESTIMO SANTANDER - GIRO - PEAC/FGI",
+      "natureza": "C",
+      "classif": "2.1.1.01.005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2316",
+      "nome": "SALDO BANCARIO",
+      "natureza": "C",
+      "classif": "2.1.1.01.006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "164",
+      "nome": "FORNECEDORES",
+      "natureza": "C",
+      "classif": "2.1.3",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "165",
+      "nome": "FORNECEDORES",
+      "natureza": "C",
+      "classif": "2.1.3.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "972",
+      "nome": "DORI ALIMENTOS S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "973",
+      "nome": "CAMIL ALIMENTOS S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "974",
+      "nome": "UNIPORT ATACADO E DISTRIB.ALIM.LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "978",
+      "nome": "MAIA - MATERIAIS PARA CONSTRUCAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.010",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "980",
+      "nome": "SP COMERCIO DE EQUIPAMENTOS DE PROTECAO INDIVIDUAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.012",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "981",
+      "nome": "REALCE PRODUTOS DE LIMPEZA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.013",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "982",
+      "nome": "SUZANO PAPEL E CELULOSE S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.014",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "983",
+      "nome": "SECULO COMERCIAL DE BEBIDAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.015",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "984",
+      "nome": "JV ROMANHA ZAMPARO EQUIPAMENTOS DE TELEFONIA",
+      "natureza": "C",
+      "classif": "2.1.3.01.016",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "987",
+      "nome": "PEPSICO DO BRASIL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.019",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "988",
+      "nome": "SPAL IND. BRAS.BEBIDAS SA",
+      "natureza": "C",
+      "classif": "2.1.3.01.020",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "989",
+      "nome": "INDUSTRIA E COMERCIO DE LATICINIOS PEREIRA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.021",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "990",
+      "nome": "ATACADAO S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.022",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "991",
+      "nome": "PEDRO MUFFATO E CIA LTDA IBIPORA",
+      "natureza": "C",
+      "classif": "2.1.3.01.023",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "992",
+      "nome": "PALHA INDUSTRIA E COMERCIO DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.024",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "996",
+      "nome": "REGINA INDUSTRIA E COMERCIO S/A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.028",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "999",
+      "nome": "RHEDE SISTEMAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.031",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1002",
+      "nome": "ANTINSETO - CONTROLE DE PRAGAS URBANAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.034",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1003",
+      "nome": "3G LONDRINA CLINICA DE SAUDE OCUPACIONAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.035",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1004",
+      "nome": "FUGINI ALIMENTOS LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.036",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1008",
+      "nome": "HARALD IND.E COM DE ALIMENTOS S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.040",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1010",
+      "nome": "AMAFRAN IND E COM DE PROD ALIM LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.042",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1014",
+      "nome": "CAFE TRES CORACOES S A",
+      "natureza": "C",
+      "classif": "2.1.3.01.046",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1016",
+      "nome": "NESTLE BRASIL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.048",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1018",
+      "nome": "IRMAOS MUFFATO & CIA LTDA - TIRADEN",
+      "natureza": "C",
+      "classif": "2.1.3.01.050",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1020",
+      "nome": "PENNACCHI E CIA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.052",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1022",
+      "nome": "COOPERATIVA AGROINDUSTRIAL NOVA ALIANCA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.054",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1024",
+      "nome": "TRANSPORTADORA LUMAS LTDA - EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.056",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1025",
+      "nome": "ALPHA DATA AUTOMACAO COMERCIAL EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.057",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1026",
+      "nome": "G.D.J. COMERCIAL DE ALARMES LTDA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.058",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1028",
+      "nome": "MOVATEC TECNOLOGIA S/S LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.060",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1033",
+      "nome": "SANTA HELENA IND. DE ALIM. S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.065",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1034",
+      "nome": "SANTHER FAB DE PAPEL STA THEREZINHA S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.066",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1035",
+      "nome": "NACOM GOYA IND. E COM. DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.067",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1037",
+      "nome": "INGA VEICULOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.069",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1038",
+      "nome": "DIALLI DISTR DE ALIM LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.070",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1039",
+      "nome": "THERMOPEL-CONVERTEDORA E COMERCIO DE PAPEL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.071",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1040",
+      "nome": "CASA DE SAUDE PRODUTOS MEDICOS E HOSPITALARES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.072",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1042",
+      "nome": "OXIFLEX GASES INDUSTRIAIS LTDA EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.074",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1043",
+      "nome": "AGUINALDO ALVES DE SOUZA ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.075",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1045",
+      "nome": "COMERCIAL E IMPORTADORA DE PNEUS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.077",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1049",
+      "nome": "BETTANIN S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.082",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1050",
+      "nome": "PRAFESTA INDUSTRIA E COMERCIO DE DESCARTAVEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.083",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1051",
+      "nome": "TELEFONICA BRASIL S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.084",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1052",
+      "nome": "ALLFLEX INDUSTRIA E COMERCIO DE ETIQUETAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.085",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1054",
+      "nome": "ZIONI IONILY CEOTTO PILAR PAPEIS EIRELI ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.087",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1055",
+      "nome": "COMPANHIA HEMMER INDUSTRIA E COMERCIO",
+      "natureza": "C",
+      "classif": "2.1.3.01.088",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1056",
+      "nome": "PECCIN S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.089",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1060",
+      "nome": "PLASUTIL INDUSTRIA E COMERCIO DE PLASTICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.093",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1061",
+      "nome": "DOUGLAS LUIS LIMBERGER EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.094",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1062",
+      "nome": "GALIZA DISTRIBUIDORA DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.095",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1065",
+      "nome": "NASCIMENTO COM E MAN DE PONTOS DE ACESSO",
+      "natureza": "C",
+      "classif": "2.1.3.01.098",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2147",
+      "nome": "37.383.638 UENDEL CABRERA MIRANDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2187",
+      "nome": "CASA ESTILO OUTLET COMERCIO E IMPORTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2082",
+      "nome": "CASA LIMPA TRANSPORTES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2044",
+      "nome": "CASA VISCARDI S/A COMERCIO E IMPORTACAO",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2123",
+      "nome": "DENTECK LTDA - FILIAL05 ES",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2257",
+      "nome": "DIVINO PALITO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2041",
+      "nome": "DOUGLAS ADRIANO DE OLIVEIRA 05831267903",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2046",
+      "nome": "FRAGA ASSESSORIA E TREINAMENTO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2214",
+      "nome": "HERNANES & MARTINS COMERCIO DE ARMARINHOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2230",
+      "nome": "HOME LI PRESENTES E DECORACOES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2134",
+      "nome": "I E FANTASIAS INFANTIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2305",
+      "nome": "LIGGA TELECOMUNICAÇÕES S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2048",
+      "nome": "LOS TIGRES COMERCIO DE MATERIAIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2323",
+      "nome": "MAURICIO GALDINO DE CAMARGO 88001695972",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2084",
+      "nome": "PAPO DE ELEVADOR COMUNICACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2306",
+      "nome": "PAPO DE ELEVADOR DIGITAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2276",
+      "nome": "PRECISION SOLUCOES VISUAIS E UTILIDADES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2163",
+      "nome": "QUALIMPOR IMP. EXP. DE PRODS. ALIM. LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2086",
+      "nome": "RUBENILSON ROSSI 25819065883",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2081",
+      "nome": "S.L. CAMANHO E CIA LTDA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2148",
+      "nome": "SIMIAO DOS SANTOS JUNIOR",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2210",
+      "nome": "SIPRIANO TRANSPORTES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2020",
+      "nome": "STANLEY JHONNY PRATAVIEIRA 36573222806",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2238",
+      "nome": "SUPRAFORM IND. E COMERCIO DE PLASTICOS E TRANSPORTES EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2339",
+      "nome": "TBT VENDAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2186",
+      "nome": "TELEFONICA CLOUD E TECNOLOGIA DO BRASIL S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2211",
+      "nome": "TRANSPORTES RODOSUPER LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1000",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2231",
+      "nome": "10UTIL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2042",
+      "nome": "59.740.750 ISABELA ANDRADE DA SILVA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2085",
+      "nome": "61.879.968 ROSIANE PEREIRA DA SILVA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2215",
+      "nome": "C. LOUISE COMERCIAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2047",
+      "nome": "C7 DISTRIBUICAO DE MATERIAIS PUBLICITARIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2307",
+      "nome": "CAMPOS SOLAR LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2277",
+      "nome": "CASTANHAS DO PARANA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2135",
+      "nome": "DISTRIBUIDORA SANTA ANA NAC. E IMP. LTDA EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2239",
+      "nome": "DSF COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2087",
+      "nome": "FIEL.COM DISTRIBUIDORA DE MATERIAIS DE HIGIENE LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2164",
+      "nome": "FORTYS IND. E COM.DE PROD. DE PAPEL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2124",
+      "nome": "J A COMERCIAL DE ELETRONICOS, ARTIGOS DE LAZER E PRESENTES L",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2045",
+      "nome": "MEDIX BRASIL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2149",
+      "nome": "R C IMPRESSOS GRAFICOS EM GERAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2049",
+      "nome": "TORRE FORTE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2021",
+      "nome": "VALERIA AMBOZINA DIAS DOS SANTOS",
+      "natureza": "C",
+      "classif": "2.1.3.01.1001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2043",
+      "nome": "CONNECT ASSESSORIA VIRTUAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2165",
+      "nome": "JL COMERCIO IMPORTACAO E DISTRIBUICAO DE MARILIA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2232",
+      "nome": "MISTRAL IMPORTADORA (GUARULHOS)",
+      "natureza": "C",
+      "classif": "2.1.3.01.1002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2150",
+      "nome": "OLI B MIX IMPORTACAO E EXPORTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2088",
+      "nome": "RASTRO DISTRIBUIDORA E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2216",
+      "nome": "SWEET VICTORIA ALIMENTOS EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.1002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2233",
+      "nome": "CLM COMERCIO E IMPORTAÇÃO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1003",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2151",
+      "nome": "SUCRIL INDUSTRIA DE DOCES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1003",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2152",
+      "nome": "MG COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2167",
+      "nome": "PREDILECTA ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2080",
+      "nome": "A L BACARIN E CIA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2016",
+      "nome": "DALTÊXTIL ID E COM DE TECIDOS LTDA. ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.1005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2009",
+      "nome": "LILIBEL ALIMENTOS",
+      "natureza": "C",
+      "classif": "2.1.3.01.1005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2153",
+      "nome": "TEIXEIRA CASA E CONSTRUCAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2017",
+      "nome": "BATATAS PREMIUM LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2236",
+      "nome": "FAMA COMERCIO E DISTRIBUIDORA DE BEBIDAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2154",
+      "nome": "RB DE GARCA - COMERCIO E INDUSTRIA DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2010",
+      "nome": "VITALEX INDUSTRIA METALURGICA LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.1006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2237",
+      "nome": "DOIS BERNARDI IND ALIM LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1007",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2208",
+      "nome": "LPP INDUSTRIA DE PLASTICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1007",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2142",
+      "nome": "CAVELE COMERCIO DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1008",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2209",
+      "nome": "LEKE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1008",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2003",
+      "nome": "FUTRICA IND E COM DE PROD ALIM LTDA ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.1009",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2143",
+      "nome": "SM INDUSTRIA DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1009",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1068",
+      "nome": "ARIOVALDO COSTA PAULO E CIA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.101",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2133",
+      "nome": "ABEL MASCARENHAS ALMEIDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1010",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2144",
+      "nome": "MERCEARIA SHIROMA LTDA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.1010",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2145",
+      "nome": "VIA BRASILE COM. IMP. EXP. PROD. ALIM. LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1011",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2199",
+      "nome": "B2C COMERCIO DE UTENSILIOS E EQUIPAMENTOS GASTRONOMICOS LT",
+      "natureza": "C",
+      "classif": "2.1.3.01.1012",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2227",
+      "nome": "GIRUS IND. E COM. DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1013",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2228",
+      "nome": "MASTER FEST INDUSTRIA E COMERCIO DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1014",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2162",
+      "nome": "ZUFFA EMBALAGENS EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.1014",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2229",
+      "nome": "DG ECOMMERCE COMERCIO DE VARIEDADES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1015",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1069",
+      "nome": "BELA VISTA PRODUTOS DE HIGIENE LTDA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.102",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2184",
+      "nome": "L.Z.M EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1021",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2185",
+      "nome": "INPLAVEL INDUSTRIA DE PLASTICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1022",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2071",
+      "nome": "RD IMAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1023",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2072",
+      "nome": "GIOCA IND. E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1024",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2073",
+      "nome": "GJA DISTRIBUIDORA LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.1025",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2074",
+      "nome": "IPLAC INDUSTRIA PLASTICA CAETES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1026",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2121",
+      "nome": "COPETROL IND. E COM. DE PRODUTOS QUIMICOS LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.1031",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "2122",
+      "nome": "STUTTGART IMPORTACAO E DISTRIBUICAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.1032",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1074",
+      "nome": "REGINA VEZANNI GRILO - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.107",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1075",
+      "nome": "PUROCOCO INDUSTRIA E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.108",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1077",
+      "nome": "RUFINI ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.110",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1078",
+      "nome": "DOCES PRINCESA EIRELI - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.111",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1079",
+      "nome": "COMERCIAL DE ALIMENTOS IRMAOS ALVES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.112",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1080",
+      "nome": "HUBER DISTRIBUIDORA DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.113",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1081",
+      "nome": "DIFLEX DISTRIBUIDORA DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.114",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1083",
+      "nome": "LONDRISAUDE PROD. ALIMENTICIOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.116",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1084",
+      "nome": "BM3 IMPORTACAO E EXPORTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.117",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1085",
+      "nome": "INDUSTRIA E COMERCIO OLIVEIRA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.118",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1086",
+      "nome": "DALPER EQUIPAMENTOS ELETRICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.119",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1087",
+      "nome": "VINICOLA PERINI LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.120",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1088",
+      "nome": "INSTITUTO FENACON",
+      "natureza": "C",
+      "classif": "2.1.3.01.121",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1089",
+      "nome": "VIACAO GARCIA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.122",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1090",
+      "nome": "EXCELENTE ALIMENTOS LTDA ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.123",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1092",
+      "nome": "DOCE SABOR IND.COM.PROD.ALIM.LTD-EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.125",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1093",
+      "nome": "HAYAMAX DISTR.PROD.ELETRONICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.126",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1094",
+      "nome": "A3B ALIMENTOS LTDA ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.127",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1097",
+      "nome": "DEYCON COMERCIO E DISTRIBUICAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.130",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1100",
+      "nome": "COPOBRAS S/A IND. E COM. DE EMBALAGENS",
+      "natureza": "C",
+      "classif": "2.1.3.01.133",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1102",
+      "nome": "YANGZI BRASIL CORPORATION S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.134",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1105",
+      "nome": "MARIA ANGELA TAMAROZZI DE OLIVEIRA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.137",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1107",
+      "nome": "REAL MULTI EPOCAS INDUSTRIA E COMERCIO EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.139",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1110",
+      "nome": "PERSONALIZE PAPEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.142",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1113",
+      "nome": "TIETE COMERCIO DE BATERIAS LTDA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.145",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1117",
+      "nome": "DVT COMERCIO, IMPORTACAO E EXPORTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.149",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1118",
+      "nome": "IMPRIMERE EMBALAGENS IMPRESSAS EIRELLI",
+      "natureza": "C",
+      "classif": "2.1.3.01.150",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1120",
+      "nome": "GRUPO TOTAL BRASIL INDUSTRIA DE DESCARTAVEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.152",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1121",
+      "nome": "COPOSUL - COPOS PLASTICOS DO SUL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.153",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1122",
+      "nome": "FIBRAFORM INDUSTRIA DE EMBALAGENS PLASTICAS LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.154",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1124",
+      "nome": "MARIA MADALENA DE CAMARGO ROSA 08363717800",
+      "natureza": "C",
+      "classif": "2.1.3.01.156",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1126",
+      "nome": "SIMAPPEL - SIMAO PEREIRA INDUSTRIA E COMERCIO DE PAPEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.158",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1127",
+      "nome": "CAMARO DA SERRA IND. E COM. LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.159",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1128",
+      "nome": "NOVA FORM INDUSTRIA E COMERCIO DE EMBALAGEM EIRELI EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.160",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1129",
+      "nome": "INDUSTRIA BRASILEIRA DE BALOES S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.161",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1130",
+      "nome": "AGENFLEX INDUSTRIA E COMERCIO DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.162",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1131",
+      "nome": "CASTELO ALIMENTOS S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.163",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1132",
+      "nome": "SHANGRI-LA IND. COM. ESPANADORES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.164",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1134",
+      "nome": "PORTO A PORTO COM IMP E EXP LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.166",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1137",
+      "nome": "NATURAL INDUSTRIA E COMERCIO DE PALITOS - EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.169",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1141",
+      "nome": "CRBS SA - CDD LONDRINA",
+      "natureza": "C",
+      "classif": "2.1.3.01.173",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1142",
+      "nome": "K1 FERRAMENTARIA E FAB UTEN PLAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.174",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1146",
+      "nome": "DETALLIA FITAS TEXTEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.178",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1147",
+      "nome": "PARAMOUNT IND E COM DE PLAST LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.179",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1149",
+      "nome": "OLIVEIRA & MONCHELATO LTDA EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.181",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1152",
+      "nome": "GL COMUNICACAO VISUAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.184",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1153",
+      "nome": "VAGNER ARAÚJO RIBEIRO VASSOURAS - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.185",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1154",
+      "nome": "PARANA CARDS - INDUSTRIA E COMERCIO DE CRACHAS EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.186",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1155",
+      "nome": "MACRIPAR-DIST. PARAF. E FERRAGENS LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.187",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1156",
+      "nome": "LATICINIOS BELA VISTA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.188",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1157",
+      "nome": "QUESTAO DE GOSTO COM. DE UTIL. DOM. LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.189",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1162",
+      "nome": "ATLANTA LONDRINA ALARMES MONITORADOS LTDA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.191",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1163",
+      "nome": "DEA DECORACAO E AMBIENTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.192",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1167",
+      "nome": "BRILHA FESTA PRESENTES EIRELI - EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.196",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1168",
+      "nome": "ALIMENTOS WILSON LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.197",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1181",
+      "nome": "AMENDUPA PRODUTOS ALIMENTICIOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.211",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1185",
+      "nome": "BRDECOR COM. E IMP. DE ARTIGOS PARA FESTAS - EIRELI - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.217",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1186",
+      "nome": "VANESSA YORIKO MAIA GREGORIO 04437533933",
+      "natureza": "C",
+      "classif": "2.1.3.01.218",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1187",
+      "nome": "MIURA DISTRIBUIDORA DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.219",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1189",
+      "nome": "STRAWPLAST INDUSTRIA E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.221",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1190",
+      "nome": "EXCELLENCE TRANSPORTE E LOGISTICA - EIRELE ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.222",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1191",
+      "nome": "LEANDRO BIGHETTI TRANSPORTES EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.223",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1192",
+      "nome": "TOXICOLOGIA PARDINI LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.224",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1193",
+      "nome": "BARBARA ELIZABETH PONCE PEREIRA 06403711911",
+      "natureza": "C",
+      "classif": "2.1.3.01.225",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1194",
+      "nome": "M.S.W. COMERCIAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.226",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1195",
+      "nome": "DUAS RODAS INDUSTRIAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.227",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1197",
+      "nome": "J M S INDUSTRIA E COMERCIO - EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.229",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1199",
+      "nome": "BWB PRODUTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.231",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1203",
+      "nome": "FOX IMPORT LTDA ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.235",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1204",
+      "nome": "MAGNATECH INDUSTRIA E COMERCIO DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.236",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1205",
+      "nome": "COLOR CONCEPTS IND.E COM. DE EMB. LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.237",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1207",
+      "nome": "DELUMA FERRAMENTARIA INDUSTRIA E COMERCIO LTDA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.239",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1210",
+      "nome": "ALBANO EMBALAGENS ESPECIAIS INDUSTRIA E COMERCIO LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.242",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1211",
+      "nome": "PLAC INDUSTRIA E COMERCIO DE ARTIGOS PARA FESTA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.243",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1221",
+      "nome": "CARMEX INDUSTRIA DE DESCARTAVEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.251",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1227",
+      "nome": "SUPERFITAS IND COM FITAS ADESIVAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.257",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1228",
+      "nome": "INDUSTRIA E COMERCIO DE LATICINIOS LUTECIA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.258",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1229",
+      "nome": "FUKUHARA HONDA & CIA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.259",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1230",
+      "nome": "POMPEIA SA INDUSTRIA E COMERCIO",
+      "natureza": "C",
+      "classif": "2.1.3.01.260",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1231",
+      "nome": "APIARIO J. SIQUEIRA LTDA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.261",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1232",
+      "nome": "VILSON CAPELETE DE OLIVEIRA",
+      "natureza": "C",
+      "classif": "2.1.3.01.262",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1233",
+      "nome": "UNIAO PARANA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.264",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1235",
+      "nome": "PRODUTOS QUIMICOS ORION S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.266",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1236",
+      "nome": "MICRON GENEROS ALIMENTICIOS - EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.267",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1237",
+      "nome": "SUL BRASILEIRA DE DISTRIBUICAO DE AGUA LTDA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.268",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1238",
+      "nome": "PASTIFICIO SELMI S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.269",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1240",
+      "nome": "GOEDERT LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.271",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1241",
+      "nome": "INDUSTRIA E COMERCIO DE PRODUTOS DE LIMPEZA GIRANDO SOL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.272",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1242",
+      "nome": "GALVANOTEK EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.273",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1243",
+      "nome": "TRAJETO LOGISTICA - TRANSP.  INTERNACIONAL LTDA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.274",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1244",
+      "nome": "TRANSLUC CARGAS E ENCOMENDA EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.275",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1245",
+      "nome": "LUCIANA COSTA BATISTA 01968932917",
+      "natureza": "C",
+      "classif": "2.1.3.01.276",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1250",
+      "nome": "P.R. NETTO IND. COM DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.280",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1251",
+      "nome": "PLUMA ARTEFATOS DE PAPEL LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.281",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1255",
+      "nome": "AB BRASIL IND E COM DE ALIM LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.285",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1256",
+      "nome": "IND.COM.PRODS.ALIMS.CEPERA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.286",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1258",
+      "nome": "E.BERNARDO WOSNIACK & CIA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.288",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1259",
+      "nome": "PLASNEDO PLASTICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.289",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1260",
+      "nome": "RUAH ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.290",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1261",
+      "nome": "R.G.M COMERCIO E DISTRIBUIDORA DE PRODUTOS QUIMICOS LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.291",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1262",
+      "nome": "BRW SUPRIMENTOS ESCOLARES E ESCRITORIO LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.292",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1263",
+      "nome": "DISTRIBUIDORA DE ALIMENTOS NAPOLI LTDA EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.293",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1265",
+      "nome": "S PIRES BATISTA ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.295",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1267",
+      "nome": "EMBALATRENTO PAPEIS IMPORTACAO E EXPORTACAO LTDA - EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.297",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1269",
+      "nome": "K.N.R. INDUSTRIA E COMERCIO DE CONSERVAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.299",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1270",
+      "nome": "AUREA INDUSTRIA E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.300",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1271",
+      "nome": "COPAZA DESCARTAVEIS PLASTICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.301",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1272",
+      "nome": "PRIMOR DOCES E CARAMELOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.302",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1273",
+      "nome": "KEHOME COMERCIO DE ARTIGOS DE BAZAR LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.303",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1274",
+      "nome": "MANIBOM ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.304",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1276",
+      "nome": "IND E COM DE ARAMES ROGINI PERES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.306",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1278",
+      "nome": "ALIMENTOS N BONN LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.308",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1280",
+      "nome": "MASSUDA COMERCIO DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.310",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1281",
+      "nome": "A.M.R. COMERCIO DE DOCES EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.311",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1283",
+      "nome": "S FORMAS COMERCIO DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.313",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1287",
+      "nome": "NAXOS IND. E COM. DE UTIL.  DOMESTICAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.317",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1288",
+      "nome": "ITAMARATY INDUSTRIA E COMERCIO S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.318",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1290",
+      "nome": "BTC TRANSPORTE DE CARGAS LTDA - EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.320",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1292",
+      "nome": "TRANSPORTADORA AMERICANA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.322",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1293",
+      "nome": "ICEBERG INDUSTRIA E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.323",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1294",
+      "nome": "ALCHESTER VELAS DECORATIVAS EIRELI ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.324",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1297",
+      "nome": "PETROPEL COM DE PAPEIS E EMBALAGENS LTDA ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.327",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1300",
+      "nome": "FC SERVICOS GRAFICOS EIRELLE",
+      "natureza": "C",
+      "classif": "2.1.3.01.330",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1305",
+      "nome": "CONTROLAREP",
+      "natureza": "C",
+      "classif": "2.1.3.01.335",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1308",
+      "nome": "TAMPPA COMERCIO ELETRONICO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.337",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1311",
+      "nome": "SBN IND E COM DE ETIQUETAS E ROT LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.340",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1314",
+      "nome": "POLICABOS COMERCIO DE PRODUTOS DE TELEINFORMATICA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.343",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1315",
+      "nome": "DANJOS COM. DE GENEROS ALIMENTICIOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.344",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1317",
+      "nome": "DACOLONIA ALIMENTOS NATURAIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.346",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1318",
+      "nome": "REGIONAL TELHAS IND. COM. PRODS. SIDERURGICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.347",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1326",
+      "nome": "ESTAB. VINICOLA ARMANDO PETERLONGO S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.353",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1327",
+      "nome": "FLORESTAL ALIMENTOS S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.354",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1329",
+      "nome": "FESTCOLOR ARTIGOS DE FESTAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.356",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1333",
+      "nome": "INDUSTRIA BANDEIRANTE EMB E UTIL PLAST LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.360",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1334",
+      "nome": "INDUSTRIA E COMERCIO DE PLASTICOS RIO PARDO LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.361",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1339",
+      "nome": "SOPRANO INDUSTRIA ELETROMETALURGICA EIRE",
+      "natureza": "C",
+      "classif": "2.1.3.01.366",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1340",
+      "nome": "SANREMO S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.367",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1344",
+      "nome": "SOBRAL INVICTA S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.371",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1347",
+      "nome": "TOFFANO PRODUTOS ALIMENTICIOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.374",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1349",
+      "nome": "AGR COMERCIO A. DE D. LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.376",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1351",
+      "nome": "FEMA COMERCIO DE BEBIDAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.378",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1352",
+      "nome": "EMELY CRISTINA VARGAS - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.379",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1358",
+      "nome": "MG INDUSTRIA E COMERCIO DE MOVEIS DE ACO - EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.385",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1359",
+      "nome": "OESA COMERCIO E REPRESENTACOES SA",
+      "natureza": "C",
+      "classif": "2.1.3.01.386",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1367",
+      "nome": "PERFETTI VAN MELLE BRASIL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.394",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1369",
+      "nome": "MAPA TELHAS E PERFIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.396",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1371",
+      "nome": "TRIUNFANTE BRASIL DISTRIBUIDORA DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.398",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1373",
+      "nome": "CASA DA CONSERVA - EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.400",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1374",
+      "nome": "JHOLIMP-PRODUTOS DE LIMPEZA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.401",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1376",
+      "nome": "ULTRA PRODUTOS ALIMENTICIOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.403",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1379",
+      "nome": "EMBRAST INDUSTRIA E COMERCIO DE EMBALAGE",
+      "natureza": "C",
+      "classif": "2.1.3.01.406",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1383",
+      "nome": "DELO INDUSTRIA E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.410",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1388",
+      "nome": "N E T ARTIGOS DE EPOCA - EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.415",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1389",
+      "nome": "RANEA INDUSTRIA E COMERCIO DE PRODUTOS ALIMENTICIO",
+      "natureza": "C",
+      "classif": "2.1.3.01.416",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1390",
+      "nome": "INGACOCO DISTRIBUIDORA DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.417",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1395",
+      "nome": "DISTRIBUIDORA DE ALIMENTOS TOP FOOD EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.422",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1396",
+      "nome": "VITORIA ONTRADE DISTRIBUIDORA DE BEBIDAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.423",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1398",
+      "nome": "BRASIL SUL EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.425",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1399",
+      "nome": "S&P IMPORTADORA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.426",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1400",
+      "nome": "INDUSTRIA DE PLASTICOS DO VALE DO ITAJAI LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.427",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1406",
+      "nome": "CLEBER GONCALVES - ALIMENTOS",
+      "natureza": "C",
+      "classif": "2.1.3.01.433",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1411",
+      "nome": "EXPRESSO PRINCESA DOS CAMPOS",
+      "natureza": "C",
+      "classif": "2.1.3.01.438",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1413",
+      "nome": "VIACAO MOTTA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.440",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1415",
+      "nome": "DANILLA FOODS BRASIL LTDA - MII",
+      "natureza": "C",
+      "classif": "2.1.3.01.441",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1417",
+      "nome": "GOOD PACK IND. COM. REPRES. LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.443",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1418",
+      "nome": "APL ALIMENTOS PETISKOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.444",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1419",
+      "nome": "SUPERVALE VERDE INDUSTRIA DE PRODUTOS QUIMICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.445",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1421",
+      "nome": "PARATI IND. COM. DE ALIM. LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.447",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1425",
+      "nome": "ADERE PRODUTOS AUTO-ADESIVOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.451",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1426",
+      "nome": "INDUSTRIAL E COMERCIAL MARVI LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.452",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1433",
+      "nome": "DESTRO COMERCIO DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.459",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1436",
+      "nome": "ROMANATO ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.462",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1438",
+      "nome": "VINICOLA SALTON S.A",
+      "natureza": "C",
+      "classif": "2.1.3.01.464",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1439",
+      "nome": "BLUESTAR INDUSTRIA PLASTICA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.465",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1442",
+      "nome": "LIMA E PERGHER INDUSTRIA E COMERCIO S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.468",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1443",
+      "nome": "BRIANEZI E BRIANEZI LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.469",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1444",
+      "nome": "GANDAN INDUSTRIA E COMERCIO DE CONFECCOES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.470",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1447",
+      "nome": "INLINE SISTEMAS LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.473",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1450",
+      "nome": "CRISTALCOPO DESCARTAVEIS S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.476",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1452",
+      "nome": "ADEGA CASA DE MADEIRA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.478",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1455",
+      "nome": "L GUSTAVO JULIANI TRANSPORTE DE CARGAS",
+      "natureza": "C",
+      "classif": "2.1.3.01.480",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1456",
+      "nome": "TRANS APUCARANA TRANSPORTES RODOVIARIOS EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.481",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1458",
+      "nome": "SEPAC SERRADOS E PASTA DE CELULOSE LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.482",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1459",
+      "nome": "MILI S/A",
+      "natureza": "C",
+      "classif": "2.1.3.01.483",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1461",
+      "nome": "IG BETTIOL UTILIDADES DOMESTICAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.485",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1463",
+      "nome": "PMG EMBALAGENS 18677324836",
+      "natureza": "C",
+      "classif": "2.1.3.01.487",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1464",
+      "nome": "TINTAS DARKA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.488",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1467",
+      "nome": "SMART CENTER COMERCIO DE MATERIAIS DE CONSTRUCAO EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.491",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1468",
+      "nome": "IDEIA EMBALAGENS E ACESSORIOS - EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.492",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1469",
+      "nome": "FULLTECH INFORMATICA EIRELLI",
+      "natureza": "C",
+      "classif": "2.1.3.01.493",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1472",
+      "nome": "TRANSPORTADORA VALENCIA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.496",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1475",
+      "nome": "FAB IND. E COM. DE PRODUTOS PARA ARTES E FESTAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.498",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1476",
+      "nome": "DA CRUZ COMERCIO DE EMBALAGENS EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.499",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1478",
+      "nome": "PIFFER IND. E COM. DE ARTIGOS P/ FESTAS LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.500",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1491",
+      "nome": "MARTINS COM SERV DISTR SA",
+      "natureza": "C",
+      "classif": "2.1.3.01.513",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1498",
+      "nome": "TEAVON COMERCIO E DISTRIBUICAO DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.520",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1499",
+      "nome": "CHOCOMAR DISTRIB.ARTIGOS DESCARTAVEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.521",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1500",
+      "nome": "ALTERNATIVA COM. DE EQUIPAM. P/ ESCRITORIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.522",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1502",
+      "nome": "DIVINA CASTANHA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.524",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1507",
+      "nome": "TRANSDELTA TRANSPORTES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.529",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1509",
+      "nome": "SOUZA FRANCO COMERCIO E DISTRIBUICAO DE EMBALAGENS E DESCART",
+      "natureza": "C",
+      "classif": "2.1.3.01.531",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1511",
+      "nome": "DOCES SANTA RITA INDUSTRIA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.533",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1515",
+      "nome": "S.S COCO EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.537",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1516",
+      "nome": "MGV PAPEIS E EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.538",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1518",
+      "nome": "GESSELE EMBALAGENS EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.540",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1521",
+      "nome": "PLASTICOS DESCARTAVEIS IND COM LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.543",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1523",
+      "nome": "ECONOLUX COM. DE MAT. ELETRICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.545",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1527",
+      "nome": "CROPAC INDUSTRIA DE DESCARTAVEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.549",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1528",
+      "nome": "CART PRINT INDUSTRIA DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.550",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1532",
+      "nome": "TRANSVALEN TRANSPORTES LTDA - GUARULHOS",
+      "natureza": "C",
+      "classif": "2.1.3.01.554",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1537",
+      "nome": "RDA INDUSTRIA E COMERCIO DE RODOS METALICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.559",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1538",
+      "nome": "COOPERATIVA VINICOLA GARIBALDI LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.560",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1548",
+      "nome": "BR MUNDO IMPORTACAO E DISTRIBUICAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.570",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1549",
+      "nome": "COOP. VINICOLA AURORA - MATRIZ",
+      "natureza": "C",
+      "classif": "2.1.3.01.571",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1551",
+      "nome": "REAL SEDA IND.E COM. ART.P/FESTAS EIRELI.",
+      "natureza": "C",
+      "classif": "2.1.3.01.573",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1563",
+      "nome": "EMULZINT ADITIVOS ALIMENTICIOS IND. COM. LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.583",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1569",
+      "nome": "DROP DESK TECNOLOGIA DE SOFTWARES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.589",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1573",
+      "nome": "ART CRYSTAL ARTIGOS P/ FESTAS",
+      "natureza": "C",
+      "classif": "2.1.3.01.593",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1579",
+      "nome": "SANCHEZ CANO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.599",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1580",
+      "nome": "MECANO PACK EMBALAGENS SA",
+      "natureza": "C",
+      "classif": "2.1.3.01.600",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1581",
+      "nome": "CROMUS EMBALAGENS INDUSTRIA E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.601",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1583",
+      "nome": "F MAIA EQUIPAMENTOS DE PROTECAO INDIVIDUAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.603",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1589",
+      "nome": "NIGUIYAKA IND COM DE PROD ALIM LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.609",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1590",
+      "nome": "SCANSOURCE BRASIL DISTRIBUIDORA DE TECNOLOGIAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.610",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1592",
+      "nome": "LMA EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.612",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1593",
+      "nome": "MELHOR DE MINAS TEMPEROS E MOLHOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.613",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1594",
+      "nome": "DEKACRON IND. PLASTICA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.614",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1601",
+      "nome": "CLINK COMERCIO DE IMPORTACAO E EXPORTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.618",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1608",
+      "nome": "INOVEN INDUSTRIA, COMERCIO E IMPORTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.625",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1609",
+      "nome": "VIDA EM GRAOS COM E IND DE PRODS ALIMENT IMP EXP LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.626",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1610",
+      "nome": "RICLAN S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.627",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1612",
+      "nome": "HORIZONTE CONSERVAS E EMBALAGENS EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.629",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1614",
+      "nome": "PLASTILANIA IND.COM.PLASTICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.631",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1615",
+      "nome": "STELLA D ORO ALIMENTOS LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.632",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1616",
+      "nome": "SO FRUTA ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.633",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1620",
+      "nome": "CONCEIÇÃO IND. E COM. DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.637",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1629",
+      "nome": "MAR DEL PLATA IMPORTADORA DE ALIMENTOS EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.646",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1635",
+      "nome": "TRANS APUCARANA TRANSPORTES RODOVIARIOS EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.652",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1638",
+      "nome": "BUSCHLE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.655",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1639",
+      "nome": "BARRY CALLEBAUT BRASIL IND. COM. DE",
+      "natureza": "C",
+      "classif": "2.1.3.01.656",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1640",
+      "nome": "CLAC INDUSTRIA E COMERCIO DE PIPOCAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.657",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1641",
+      "nome": "DISTRIBUIDORA DE ALIMENTOS DOS ALPES",
+      "natureza": "C",
+      "classif": "2.1.3.01.658",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1654",
+      "nome": "TRANSVALEN TRANSPORTES LTDA - MARINGA",
+      "natureza": "C",
+      "classif": "2.1.3.01.671",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1656",
+      "nome": "G.D.J. COMERCIAL DE ALARMES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.673",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1657",
+      "nome": "41.259.413 FRANCYELLI BATISTA CORREA",
+      "natureza": "C",
+      "classif": "2.1.3.01.674",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1658",
+      "nome": "3G ESPACO SST LONDRINA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.675",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1659",
+      "nome": "SAAC ASSISTENCIA TECNICA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.676",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1660",
+      "nome": "TAMPPA COMERCIO ELETRONICO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.677",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1661",
+      "nome": "PAGAR.ME INSTITUICAO DE PAGAMENTO S.A",
+      "natureza": "C",
+      "classif": "2.1.3.01.678",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1662",
+      "nome": "FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.679",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1665",
+      "nome": "IND TORRONE N SRA MONTEVERGINE - MATRIZ",
+      "natureza": "C",
+      "classif": "2.1.3.01.682",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1667",
+      "nome": "R. H. BARBOSA - IMPORTADORA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.684",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1670",
+      "nome": "MOOCA COMERCIAL IMP. E EXP LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.687",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1676",
+      "nome": "MADILON IND. E COM. DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.693",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1677",
+      "nome": "LC EMBALAGENS E PAPEL LTDA EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.694",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1680",
+      "nome": "INDUSTRIAS QUIMICAS TRES PODERES",
+      "natureza": "C",
+      "classif": "2.1.3.01.697",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1681",
+      "nome": "DR. OETKER BRASIL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.698",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1682",
+      "nome": "COMPANHIA BRASILEIRA DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.699",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1692",
+      "nome": "EMPORIO MUNDO SAUDAVEL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.707",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1695",
+      "nome": "FAMA INDUSTRIA E COMERCIO DE BEBIDAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.710",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1697",
+      "nome": "PACKFORM INDUSTRIA E COMERCIO DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.712",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1699",
+      "nome": "LC MARTINS SANTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.714",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1702",
+      "nome": "RISCHIOTO INDUSTRIA E COMERCIO DE PLASTICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.717",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1704",
+      "nome": "SGM INOVACAO EM PRODUTOS NATURAIS",
+      "natureza": "C",
+      "classif": "2.1.3.01.719",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1707",
+      "nome": "AGNUS PLAST - IND. E COM.DE EMB. LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.722",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1709",
+      "nome": "ALIMENTOS ATALAIA LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.724",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1710",
+      "nome": "B.V. INDUSTRIA E COMERCIO DE PAPEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.725",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1711",
+      "nome": "MS EMBALAGENS PLASTICAS LTDA - EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.726",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1713",
+      "nome": "ITAUNA INDUSTRIA DE PAPEL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.728",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1714",
+      "nome": "FESTA BRASIL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.729",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1715",
+      "nome": "ABC COMPANY LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.730",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1718",
+      "nome": "GOOGLE BRASIL INTERNET LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.733",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1722",
+      "nome": "ITATEX INDUSTRIA E COMERCIO DE PRODUTOS TEXTEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.736",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1723",
+      "nome": "BONO PLASTICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.737",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1724",
+      "nome": "GOOD DAYS BRASIL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.738",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1726",
+      "nome": "DIPORT DISTRIBUIDORA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.740",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1727",
+      "nome": "SUPERCENTER COMERCIO ATACADISTA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.741",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1728",
+      "nome": "LUKAPEL EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.742",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1729",
+      "nome": "LEILA M MIRANDA INDUSTRIA E COMERCIO DE PLASTICO ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.743",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1730",
+      "nome": "CONDIPEL EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.744",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1731",
+      "nome": "OI UNIDADE INDUSTRIAL DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.745",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1732",
+      "nome": "LECACAU CHOCOLATES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.746",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1733",
+      "nome": "PAPEIS REMAPEL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.747",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1734",
+      "nome": "JM CLEAN COMERCIO DE PRODUTOS DE HIGIENE E LIMPEZA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.748",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1735",
+      "nome": "CNA S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.749",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1736",
+      "nome": "ZANELLA PLASTICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.750",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1737",
+      "nome": "PERFECT EQUIPAMENTOS DE LIMPEZA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.751",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1738",
+      "nome": "GUAPEL IND. DE PRODUTOS DE PAPEL LTDA-ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.752",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1740",
+      "nome": "COMPAX LTDA - EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.754",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1741",
+      "nome": "DUMONGE IND. E COM. DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.755",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1742",
+      "nome": "AS INDUSTRIA E COMERCIO DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.756",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1743",
+      "nome": "DANIELLY BASTOS BALDAN",
+      "natureza": "C",
+      "classif": "2.1.3.01.757",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1745",
+      "nome": "MMT BATATAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.759",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1747",
+      "nome": "INDUSTRIA DE CHOCOLATES ROMA - LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.761",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1753",
+      "nome": "REAL COMERCIAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.763",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1754",
+      "nome": "A.M.A ESSENCIAS AROMATICAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.764",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1755",
+      "nome": "MARITUCS ALIMENTOS LIMITADA",
+      "natureza": "C",
+      "classif": "2.1.3.01.765",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1757",
+      "nome": "D S J - LONDRINA ARMARINHOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.767",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1759",
+      "nome": "LOCATELLI MATERIAIS DE LIMPEZA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.769",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1760",
+      "nome": "AMX ETIQUETAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.770",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1762",
+      "nome": "F. SANCHES - CONFECCOES",
+      "natureza": "C",
+      "classif": "2.1.3.01.772",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1763",
+      "nome": "LIPLAST INDUSTRIA E COMERCIO DE PLASTICOS LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.773",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1764",
+      "nome": "TERMOLAR S/A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.774",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1767",
+      "nome": "PROMMOBIO IND E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.777",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1769",
+      "nome": "BASTON INDUSTRIA DE AEROSSOIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.779",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1771",
+      "nome": "PLASTMARE INDUSTRIA E COMERCIO DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.781",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1773",
+      "nome": "DISTRIBUIDORA VERO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.783",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1774",
+      "nome": "DE BONI INDUSTRIA E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.784",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1775",
+      "nome": "M.C.BADY COM. E INDUSTRIA DE ALIMENTOS LTDA-ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.785",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1777",
+      "nome": "SOBERANA ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.787",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1778",
+      "nome": "ZD ALIMENTOS S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.788",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1779",
+      "nome": "PAULINOR COMERCIAL DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.789",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1780",
+      "nome": "BELLOCOPO DESCARTAVEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.790",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1781",
+      "nome": "SRP4 COMERCIO E REPRESENTACOES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.791",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1782",
+      "nome": "ARCO IRIS BRASIL IND COM DE PRODUTOS ALIMENTICIOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.792",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1784",
+      "nome": "MARA CRISTINA LEANDRO SARTORI - PRODUTOS DE LIMPEZA",
+      "natureza": "C",
+      "classif": "2.1.3.01.794",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1785",
+      "nome": "29.854.992 MARCOS ROBERTO RIBEIRO DE BARROS",
+      "natureza": "C",
+      "classif": "2.1.3.01.795",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1786",
+      "nome": "CERTANO COMERCIAL DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.796",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1787",
+      "nome": "MEGA BRASIL DISTRIBUIDORA DE GENEROS ALIMENTICIOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.797",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1788",
+      "nome": "DRT INDUSTRIA E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.798",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1790",
+      "nome": "BIDOLUX COMERCIO DE ALIMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.800",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1791",
+      "nome": "IGREJA EVANGELICA ASSEMBLEIA DE DEUS",
+      "natureza": "C",
+      "classif": "2.1.3.01.801",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1795",
+      "nome": "LEANDRO MELO TRANSPORTES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.805",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1797",
+      "nome": "EUCATUR EMP. UNIAO CASCAVEL DE TRANSP. TUR.",
+      "natureza": "C",
+      "classif": "2.1.3.01.807",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1798",
+      "nome": "MENDES TRANSPORTES EXPRESS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.808",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1799",
+      "nome": "ALLYSON LION DE LIMA",
+      "natureza": "C",
+      "classif": "2.1.3.01.809",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1800",
+      "nome": "S.S. DRYWALL COMERCIO DE MATERIAL DE CON",
+      "natureza": "C",
+      "classif": "2.1.3.01.810",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1802",
+      "nome": "ITALIA PAPEIS EIRELI - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.812",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1803",
+      "nome": "TEMPEREX IND. E COM. DE PROD. ALIM. LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.813",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1804",
+      "nome": "IONE E EDUARDO FANTASIAS INFANTIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.814",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1805",
+      "nome": "BRITEL SOLUCOES EM PAPEIS E FILMES LTDA.",
+      "natureza": "C",
+      "classif": "2.1.3.01.815",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1807",
+      "nome": "M. A. CISZ - CALHAS E RUFOS",
+      "natureza": "C",
+      "classif": "2.1.3.01.817",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1808",
+      "nome": "VIBRA EMBALAGENS COMERCIO E IMPORTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.818",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1809",
+      "nome": "38010759 TERESINHA DA SILVA",
+      "natureza": "C",
+      "classif": "2.1.3.01.819",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1810",
+      "nome": "DB DOCES",
+      "natureza": "C",
+      "classif": "2.1.3.01.820",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1812",
+      "nome": "JM BOBINAS E ETIQUETAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.822",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1813",
+      "nome": "NOROESTE ACUMULADORES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.823",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1815",
+      "nome": "MAR AZUL - PRESTADORA DE SERVICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.825",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1816",
+      "nome": "UTIL COMERCIO E CONFECCAO LTDA EPP MT AMERICANA SP",
+      "natureza": "C",
+      "classif": "2.1.3.01.826",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1817",
+      "nome": "FAELLAS GOURMET LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.827",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1818",
+      "nome": "FORFEST INDUSTRIA DE DESCARTAVEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.828",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1819",
+      "nome": "BRILLIANCE IMPORTACAO E EXPORTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.829",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1824",
+      "nome": "SINALIZE PRODUCOES SERIGRAFICAS IMP EXP LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.834",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1829",
+      "nome": "FESTA SHOW IMPORTACAO E DISTRIBUICAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.839",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1830",
+      "nome": "MARTIPLAST INDUSTRIA E COMERCIO DE PLASTICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.840",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1832",
+      "nome": "MCM COMUNICACAO VISUAL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.841",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1833",
+      "nome": "WRN INDUSTRIA DE ALIMENTOS LTDA - ME",
+      "natureza": "C",
+      "classif": "2.1.3.01.842",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1834",
+      "nome": "ROOF SOLUCOES EM EPS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.843",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1835",
+      "nome": "A HORA DO DOCE INDUSTRIA E COMERCIO DE DOCES EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.844",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1837",
+      "nome": "UNIONPLAST INDUSTRIA E COM DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.846",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1838",
+      "nome": "REFRIKO INDUSTRIA E COMERCIO DE BEBIDAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.847",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1839",
+      "nome": "LB COMERCIO DE EMBALAGENS PLASTICAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.848",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1840",
+      "nome": "DMH HIGIENE & COMERCIO DE PRODUTOS DE LIMPEZA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.849",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1841",
+      "nome": "ZANATTA INDUSTRIA E TRANSPORTE DE BALAS E DOCES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.850",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1842",
+      "nome": "STANG INDUSTRIA E COMERCIO DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.851",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1845",
+      "nome": "BEEFEST ARTIGOS PARA FESTAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.852",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1846",
+      "nome": "AURORA BEBIDAS E ALIMENTOS FINOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.853",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1847",
+      "nome": "GLAUBER OLIVEIRA SANTOS",
+      "natureza": "C",
+      "classif": "2.1.3.01.854",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1848",
+      "nome": "COLATUDO ETIQUETAS E IMPRESSOS EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.855",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1849",
+      "nome": "BIGUA ALIMENTOS INDUSTRIA E COMERCIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.856",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1851",
+      "nome": "GUIMARAES BRASIL IND ALIM LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.858",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1852",
+      "nome": "DPB SERVICOS DE APOIO ADMINISTRATIVO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.859",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1853",
+      "nome": "HUNTER RECURSOS HUMANOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.860",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1854",
+      "nome": "HARPYA - COMPLIANCE TRIBUTARIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.861",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1857",
+      "nome": "INDUSTRIA E COMERCIO DE PORCELANAS LU LTDA - EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.863",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1858",
+      "nome": "PLASK INDUSTRIA E COMERCIO DE PLASTICOS E TRANSPORTES EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.864",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1859",
+      "nome": "I.C.M. HALLEY LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.865",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1860",
+      "nome": "ISPL INDUSTRIA SULAMERICANA DE PRODUTO",
+      "natureza": "C",
+      "classif": "2.1.3.01.866",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1861",
+      "nome": "51.965.588 RAFAEL RODRIGUES CARVALHO",
+      "natureza": "C",
+      "classif": "2.1.3.01.867",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1862",
+      "nome": "YOCIHIRO AIDA E CIA LTDA EPP",
+      "natureza": "C",
+      "classif": "2.1.3.01.868",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1863",
+      "nome": "58.777.958 SIDNEY SOARES DA SILVA",
+      "natureza": "C",
+      "classif": "2.1.3.01.869",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1864",
+      "nome": "DROVIPAR COMERCIO E DISTRIBUICAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.870",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1865",
+      "nome": "CURY COMERCIO IMPORTACAO EXPORTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.871",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1866",
+      "nome": "RAINHA DO CACAU LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.872",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1868",
+      "nome": "BONFIM COMERCIO DE TINTAS EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.874",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1869",
+      "nome": "GARCIA & GONZALES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.875",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1872",
+      "nome": "GHC INDUSTRIA DE ALIMENTOS - EIRELI",
+      "natureza": "C",
+      "classif": "2.1.3.01.878",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1873",
+      "nome": "BRK COMERCIO E REPRESENTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.879",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1874",
+      "nome": "MULTCABOS COMERCIO DE INFORMATICA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.880",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1884",
+      "nome": "ETIQUETAS MARINGA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.890",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1885",
+      "nome": "E.M. SOLUCOES INTEGRADAS DE SISTEMAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.891",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1886",
+      "nome": "SIDNEY SHIROSHI KAYAMORI & CIA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.892",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1887",
+      "nome": "JL CACAMBINHA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.893",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1888",
+      "nome": "HILDEMAR OLIVEIRA PAUFERRO 56312202534",
+      "natureza": "C",
+      "classif": "2.1.3.01.894",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1889",
+      "nome": "COMERCIAL E INDUSTRIAL DE EMBALAGENS SAO JOAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.895",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1893",
+      "nome": "TRIUNFANTE BRASIL DISTRIBUIDORA DE ALIMENTOS S.A.",
+      "natureza": "C",
+      "classif": "2.1.3.01.899",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1894",
+      "nome": "VIDEPEL IND E COM DE ARTEF DE PAPEL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.900",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1895",
+      "nome": "INDALTEX COMERCIO E SERVICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.901",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1896",
+      "nome": "WEI CHIAN LEE PRESENTES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.902",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1897",
+      "nome": "OFICIALPLAST ARTIGOS PARA FESTAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.903",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1915",
+      "nome": "GESOPLAST EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.921",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1916",
+      "nome": "LIDER 2 PAPEIS - GUARDANAPOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.922",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1917",
+      "nome": "EMPAPER COMERCIO DE PAPEIS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.923",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1918",
+      "nome": "CEREALISTA SUPERIOR LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.924",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1919",
+      "nome": "VINICOLA CAMPESTRE LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.925",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1920",
+      "nome": "INTERFOOD IMPORTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.926",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1926",
+      "nome": "PLASTMINAS INDUSTRIA DE EMBALAGENS PLASTICA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.932",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1927",
+      "nome": "ZEPLAST COM. DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.933",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1928",
+      "nome": "INDUSTRIA E COMERCIO DE ALUMINIO SANTA CATARINA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.934",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1932",
+      "nome": "LEROY MERLIN CIA BRASILEIRA DE BRICOLAGEM",
+      "natureza": "C",
+      "classif": "2.1.3.01.938",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1939",
+      "nome": "SANTOS E CABRAL DISTRIBUIDORA DE ACABAMENTOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.945",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1940",
+      "nome": "KLEFA COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.946",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1942",
+      "nome": "60.493.903 ARIADNA DE ALMEIDA MARCONDES REIS",
+      "natureza": "C",
+      "classif": "2.1.3.01.948",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1943",
+      "nome": "54.606.479 ANA CAROLINA CORREA",
+      "natureza": "C",
+      "classif": "2.1.3.01.949",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1944",
+      "nome": "60.480.394 ESTER BATISTA CORREA",
+      "natureza": "C",
+      "classif": "2.1.3.01.950",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1945",
+      "nome": "PGD TERCEIRIZACAO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.951",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1946",
+      "nome": "KLF FESTAS IND E COM DE ARTIGOS PARA FESTAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.952",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1962",
+      "nome": "LINDA FESTAS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.968",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1963",
+      "nome": "DE CONTO COMERCIO DE EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.969",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1964",
+      "nome": "BOXSUL EMBALAGENS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.970",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1965",
+      "nome": "SO AROMA DO BRASIL LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.971",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1968",
+      "nome": "SMART BUY SON LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.974",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1969",
+      "nome": "NPAC VARIEDADES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.975",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1970",
+      "nome": "SANTANA COMERCIO EM GERAL ATAC E VAR LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.976",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1979",
+      "nome": "VIA DA SAUDE COMERCIO DE PRODUTOS HOSPITALARES LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.985",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1980",
+      "nome": "CENTERMAQ COMERCIO DE MOVEIS PARA ESCRITORIO LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.986",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1981",
+      "nome": "COMERCIAL OBA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.987",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1982",
+      "nome": "KHROMA GRAFICA E EDITORA LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.988",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1983",
+      "nome": "DELLAPLAST INDUSTRIA DE PLASTICOS LTDA",
+      "natureza": "C",
+      "classif": "2.1.3.01.989",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "169",
+      "nome": "OBRIGACOES TRIBUTARIAS",
+      "natureza": "C",
+      "classif": "2.1.4",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "170",
+      "nome": "IMPOSTOS E CONTRIBUICOES A RECOLHER",
+      "natureza": "C",
+      "classif": "2.1.4.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "172",
+      "nome": "ICMS A RECOLHER",
+      "natureza": "C",
+      "classif": "2.1.4.01.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "176",
+      "nome": "IRPJ A RECOLHER",
+      "natureza": "C",
+      "classif": "2.1.4.01.006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "177",
+      "nome": "CSLL A RECOLHER",
+      "natureza": "C",
+      "classif": "2.1.4.01.007",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "179",
+      "nome": "PIS A RECOLHER",
+      "natureza": "C",
+      "classif": "2.1.4.01.009",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "180",
+      "nome": "COFINS A RECOLHER",
+      "natureza": "C",
+      "classif": "2.1.4.01.010",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "183",
+      "nome": "ISS RETIDO A RECOLHER",
+      "natureza": "C",
+      "classif": "2.1.4.01.013",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "479",
+      "nome": "SIMPLES NACIONAL A RECOLHER",
+      "natureza": "C",
+      "classif": "2.1.4.01.015",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "185",
+      "nome": "OBRIGACOES TRABALHISTAS E PREVIDENCIARIAS",
+      "natureza": "C",
+      "classif": "2.1.5",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "186",
+      "nome": "OBRIGACOES COM O PESSOAL",
+      "natureza": "C",
+      "classif": "2.1.5.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "187",
+      "nome": "SALARIOS E ORDENADOS A PAGAR",
+      "natureza": "C",
+      "classif": "2.1.5.01.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "188",
+      "nome": "PRO LABORE A PAGAR",
+      "natureza": "C",
+      "classif": "2.1.5.01.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "189",
+      "nome": "13 SALARIO A PAGAR",
+      "natureza": "C",
+      "classif": "2.1.5.01.003",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "190",
+      "nome": "OBRIGACOES SOCIAIS",
+      "natureza": "C",
+      "classif": "2.1.5.02",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "192",
+      "nome": "FGTS A RECOLHER",
+      "natureza": "C",
+      "classif": "2.1.5.02.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "489",
+      "nome": "CONTRIBUICAO SINDICAL A RECOLHER",
+      "natureza": "C",
+      "classif": "2.1.5.02.003",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "799",
+      "nome": "TRIBUTOS FEDERAIS A RECOLHER",
+      "natureza": "C",
+      "classif": "2.1.5.02.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "193",
+      "nome": "PROVISOES",
+      "natureza": "C",
+      "classif": "2.1.5.03",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "194",
+      "nome": "PROVISAO PARA FERIAS",
+      "natureza": "C",
+      "classif": "2.1.5.03.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "195",
+      "nome": "PROVISAO PARA 13 SALARIO",
+      "natureza": "C",
+      "classif": "2.1.5.03.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "196",
+      "nome": "INSS S/ PROVISAO PARA FERIAS",
+      "natureza": "C",
+      "classif": "2.1.5.03.003",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "197",
+      "nome": "INSS S/ PROVISAO PARA 13 SALARIO",
+      "natureza": "C",
+      "classif": "2.1.5.03.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "198",
+      "nome": "FGTS S/ PROVISAO PARA FERIAS",
+      "natureza": "C",
+      "classif": "2.1.5.03.005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "199",
+      "nome": "FGTS S/ PROVISAO PARA 13 SALARIO",
+      "natureza": "C",
+      "classif": "2.1.5.03.006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "200",
+      "nome": "OUTRAS OBRIGACOES",
+      "natureza": "C",
+      "classif": "2.1.6",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "203",
+      "nome": "ENERGIA ELETRICA, AGUA E TELEFONE A PAGAR",
+      "natureza": "C",
+      "classif": "2.1.6.03",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "51",
+      "nome": "ENERGIA ELETRICA, AGUA E TELEFONE A PAGAR",
+      "natureza": "C",
+      "classif": "2.1.6.03.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "207",
+      "nome": "DIVIDENDOS, PARTICIPACOES E JUROS S/ O CAPITAL",
+      "natureza": "C",
+      "classif": "2.1.7",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "208",
+      "nome": "DIVIDENDOS",
+      "natureza": "C",
+      "classif": "2.1.7.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "210",
+      "nome": "DIVIDENDOS A PAGAR",
+      "natureza": "C",
+      "classif": "2.1.7.01.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "503",
+      "nome": "PASSIVO NAO CIRCULANTE",
+      "natureza": "C",
+      "classif": "2.2",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "217",
+      "nome": "PASSIVO EXIGIVEL A LONGO PRAZO",
+      "natureza": "C",
+      "classif": "2.2.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "219",
+      "nome": "EMPRESTIMOS",
+      "natureza": "C",
+      "classif": "2.2.1.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1748",
+      "nome": "EMPRESTIMO SICOOB CCB- PEAC/FGI",
+      "natureza": "C",
+      "classif": "2.2.1.01.003",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "224",
+      "nome": "TITULOS A PAGAR",
+      "natureza": "C",
+      "classif": "2.2.1.07",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "78",
+      "nome": "TITULOS A PAGAR",
+      "natureza": "C",
+      "classif": "2.2.1.07.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "242",
+      "nome": "PATRIMONIO LIQUIDO",
+      "natureza": "C",
+      "classif": "2.3",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "264",
+      "nome": "LUCROS OU PREJUIZOS ACUMULADOS",
+      "natureza": "C",
+      "classif": "2.3.5",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "265",
+      "nome": "LUCROS OU PREJUIZOS ACUMULADOS",
+      "natureza": "C",
+      "classif": "2.3.5.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "266",
+      "nome": "LUCROS ACUMULADOS",
+      "natureza": "C",
+      "classif": "2.3.5.01.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "267",
+      "nome": "(-) PREJUIZOS ACUMULADOS",
+      "natureza": "C",
+      "classif": "2.3.5.01.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "522",
+      "nome": "LUCRO DO EXERCICIO",
+      "natureza": "C",
+      "classif": "2.3.5.01.003",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "523",
+      "nome": "PREJUIZO DO EXERCICIO",
+      "natureza": "C",
+      "classif": "2.3.5.01.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1219",
+      "nome": "DISTRIBUIÇAO DE LUCROS",
+      "natureza": "C",
+      "classif": "2.3.5.01.006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1690",
+      "nome": "AJUSTE DEVEDORES DE EXERCIICOS ANTERIORES",
+      "natureza": "C",
+      "classif": "2.3.5.01.007",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "402",
+      "nome": "CONTAS DE RESULTADO - RECEITAS",
+      "natureza": "D",
+      "classif": "3",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "403",
+      "nome": "RECEITAS OPERACIONAIS",
+      "natureza": "C",
+      "classif": "3.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "404",
+      "nome": "RECEITA BRUTA DE VENDAS E SERVICOS",
+      "natureza": "C",
+      "classif": "3.1.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "405",
+      "nome": "RECEITA BRUTAS DE VENDAS DE MERCADORIAS",
+      "natureza": "C",
+      "classif": "3.1.1.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "408",
+      "nome": "VENDA DE MERCADORIAS",
+      "natureza": "C",
+      "classif": "3.1.1.01.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "413",
+      "nome": "(-) DEDUCOES DA RECEITA BRUTA",
+      "natureza": "C",
+      "classif": "3.1.2",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "414",
+      "nome": "(-) CANCELAMENTO E DEVOLUCOES",
+      "natureza": "C",
+      "classif": "3.1.2.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "417",
+      "nome": "(-) DEVOLUCAO DE VENDA DE MERCADORIAS",
+      "natureza": "C",
+      "classif": "3.1.2.01.003",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "424",
+      "nome": "(-) IMPOSTOS SOBRE VENDAS E SERVICOS",
+      "natureza": "C",
+      "classif": "3.1.2.03",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "426",
+      "nome": "(-) ICMS",
+      "natureza": "C",
+      "classif": "3.1.2.03.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "428",
+      "nome": "(-) COFINS",
+      "natureza": "C",
+      "classif": "3.1.2.03.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "429",
+      "nome": "(-) PIS",
+      "natureza": "C",
+      "classif": "3.1.2.03.005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "480",
+      "nome": "(-) SIMPLES NACIONAL",
+      "natureza": "C",
+      "classif": "3.1.2.03.008",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "482",
+      "nome": "(-) SUBSTITUICAO TRIBUTARIA",
+      "natureza": "C",
+      "classif": "3.1.2.03.009",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "269",
+      "nome": "CONTAS DE RESULTADOS - CUSTOS E DESPESAS",
+      "natureza": "D",
+      "classif": "4",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "500",
+      "nome": "CUSTOS",
+      "natureza": "D",
+      "classif": "4.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "468",
+      "nome": "CUSTOS DAS MERCADORIAS VENDIDAS",
+      "natureza": "D",
+      "classif": "4.1.7",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "469",
+      "nome": "CUSTOS DAS MERCADORIAS VENDIDAS",
+      "natureza": "D",
+      "classif": "4.1.7.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "470",
+      "nome": "COMPRAS DE MERCADORIAS",
+      "natureza": "D",
+      "classif": "4.1.7.01.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "86",
+      "nome": "(+) ESTOQUE INICIAL DE MERCADORIAS",
+      "natureza": "D",
+      "classif": "4.1.7.01.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "95",
+      "nome": "(-) ICMS S/ COMPRAS",
+      "natureza": "D",
+      "classif": "4.1.7.01.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "115",
+      "nome": "(+) FRETES S/ COMPRAS",
+      "natureza": "D",
+      "classif": "4.1.7.01.007",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "153",
+      "nome": "(-) DEVOLUCAO DE COMPRAS",
+      "natureza": "D",
+      "classif": "4.1.7.01.008",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "154",
+      "nome": "(+) MERCADORIAS BONIFICADAS",
+      "natureza": "D",
+      "classif": "4.1.7.01.009",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "156",
+      "nome": "(-) ESTOQUE FINAL",
+      "natureza": "D",
+      "classif": "4.1.7.01.011",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "295",
+      "nome": "DESPESAS OPERACIONAIS",
+      "natureza": "D",
+      "classif": "4.2",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "296",
+      "nome": "DESPESAS COM VENDAS",
+      "natureza": "D",
+      "classif": "4.2.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "307",
+      "nome": "COMISSOES SOBRE VENDAS",
+      "natureza": "D",
+      "classif": "4.2.1.02",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "308",
+      "nome": "COMISSOES",
+      "natureza": "D",
+      "classif": "4.2.1.02.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "314",
+      "nome": "DESPESAS COM VIAGENS E REPRESENTACOES",
+      "natureza": "D",
+      "classif": "4.2.1.05",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "318",
+      "nome": "LANCHES E REFEICOES",
+      "natureza": "D",
+      "classif": "4.2.1.05.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "329",
+      "nome": "DESPESAS ADMINISTRATIVAS",
+      "natureza": "D",
+      "classif": "4.2.2",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "330",
+      "nome": "DESPESAS COM PESSOAL",
+      "natureza": "D",
+      "classif": "4.2.2.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "331",
+      "nome": "SALARIOS E ORDENADOS",
+      "natureza": "D",
+      "classif": "4.2.2.01.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "332",
+      "nome": "PRO LABORE",
+      "natureza": "D",
+      "classif": "4.2.2.01.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "334",
+      "nome": "13 SALARIO",
+      "natureza": "D",
+      "classif": "4.2.2.01.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "335",
+      "nome": "FERIAS",
+      "natureza": "D",
+      "classif": "4.2.2.01.005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "336",
+      "nome": "INSS",
+      "natureza": "D",
+      "classif": "4.2.2.01.006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "337",
+      "nome": "FGTS",
+      "natureza": "D",
+      "classif": "4.2.2.01.007",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "338",
+      "nome": "INDENIZACOES E AVISO PREVIO",
+      "natureza": "D",
+      "classif": "4.2.2.01.008",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "492",
+      "nome": "VALE TRANSPORTE",
+      "natureza": "D",
+      "classif": "4.2.2.01.010",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "521",
+      "nome": "DESPESAS COM ALIMENTACAO",
+      "natureza": "D",
+      "classif": "4.2.2.01.012",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "345",
+      "nome": "IMPOSTOS E TAXAS DIVERSAS",
+      "natureza": "D",
+      "classif": "4.2.2.03",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "349",
+      "nome": "IPVA E SEGURO OBRIGATORIO",
+      "natureza": "D",
+      "classif": "4.2.2.03.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "350",
+      "nome": "IMPOSTOS E TAXAS DIVERSAS",
+      "natureza": "D",
+      "classif": "4.2.2.03.005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "353",
+      "nome": "DESPESAS GERAIS",
+      "natureza": "D",
+      "classif": "4.2.2.04",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "354",
+      "nome": "ENERGIA ELETRICA",
+      "natureza": "D",
+      "classif": "4.2.2.04.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "355",
+      "nome": "AGUA E ESGOTO",
+      "natureza": "D",
+      "classif": "4.2.2.04.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "356",
+      "nome": "TELEFONE/ INTERNET",
+      "natureza": "D",
+      "classif": "4.2.2.04.003",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "358",
+      "nome": "SEGUROS",
+      "natureza": "D",
+      "classif": "4.2.2.04.005",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "361",
+      "nome": "ASSISTENCIA CONTABIL",
+      "natureza": "D",
+      "classif": "4.2.2.04.008",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "362",
+      "nome": "SERVICOS PRESTADOS POR TERCEIROS",
+      "natureza": "D",
+      "classif": "4.2.2.04.009",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "363",
+      "nome": "DEPRECIACOES E AMORTIZACOES",
+      "natureza": "D",
+      "classif": "4.2.2.04.010",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "364",
+      "nome": "PROPAGANDA E PUBLICIDADE",
+      "natureza": "D",
+      "classif": "4.2.2.04.011",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "493",
+      "nome": "MULTA DE TRANSITO",
+      "natureza": "D",
+      "classif": "4.2.2.04.014",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "158",
+      "nome": "ALUGUEIS",
+      "natureza": "D",
+      "classif": "4.2.2.04.015",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "159",
+      "nome": "MANUTENCAO DE SISTEMAS",
+      "natureza": "D",
+      "classif": "4.2.2.04.016",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "161",
+      "nome": "MATERIAIS DE USO E CONSUMO",
+      "natureza": "D",
+      "classif": "4.2.2.04.018",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "166",
+      "nome": "MONITORAMENTO E ALARMES",
+      "natureza": "D",
+      "classif": "4.2.2.04.021",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "206",
+      "nome": "MENSALIDADES E ANUIDADES",
+      "natureza": "D",
+      "classif": "4.2.2.04.022",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "1719",
+      "nome": "CONSULTORIA",
+      "natureza": "D",
+      "classif": "4.2.2.04.027",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "367",
+      "nome": "DESPESAS FINANCEIRAS",
+      "natureza": "D",
+      "classif": "4.2.2.05",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "368",
+      "nome": "JUROS PASSIVOS",
+      "natureza": "D",
+      "classif": "4.2.2.05.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "371",
+      "nome": "DESCONTO CONCEDIDOS",
+      "natureza": "D",
+      "classif": "4.2.2.05.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "374",
+      "nome": "DESPESAS BANCARIAS",
+      "natureza": "D",
+      "classif": "4.2.2.05.007",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "431",
+      "nome": "RECEITAS FINANCEIRAS",
+      "natureza": "D",
+      "classif": "4.2.2.06",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "432",
+      "nome": "RECEITAS DE APLICACOES FINANCEIRAS",
+      "natureza": "D",
+      "classif": "4.2.2.06.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "443",
+      "nome": "OUTRAS RECEITAS OPERACIONAIS",
+      "natureza": "D",
+      "classif": "4.2.2.08",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "958",
+      "nome": "AMOSTRA GRATIS / BRINDES E BONIFICACOES",
+      "natureza": "D",
+      "classif": "4.2.2.08.006",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "380",
+      "nome": "DESPESAS NAO OPERACIONAIS",
+      "natureza": "D",
+      "classif": "4.3",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "381",
+      "nome": "RESULTADOS NAO OPERACIONAIS",
+      "natureza": "D",
+      "classif": "4.3.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "392",
+      "nome": "OUTRAS BAIXAS DO ATIVO PERMANENTE",
+      "natureza": "D",
+      "classif": "4.3.1.04",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "394",
+      "nome": "BAIXAS DE IMOBILIZADO",
+      "natureza": "D",
+      "classif": "4.3.1.04.002",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "449",
+      "nome": "RECEITAS NAO OPERACIONAIS",
+      "natureza": "D",
+      "classif": "4.4",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "450",
+      "nome": "RESULTADOS NAO OPERACIONAIS",
+      "natureza": "D",
+      "classif": "4.4.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "453",
+      "nome": "LUCROS NA ALIENACAO DE IMOBILIZADO",
+      "natureza": "D",
+      "classif": "4.4.1.02",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "457",
+      "nome": "LUCROS NA ALIENACAO DE VEICULOS",
+      "natureza": "D",
+      "classif": "4.4.1.02.004",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "830",
+      "nome": "PROVISOES",
+      "natureza": "D",
+      "classif": "4.5",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "831",
+      "nome": "PROVISOES",
+      "natureza": "D",
+      "classif": "4.5.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "832",
+      "nome": "PROVISAO PARA IMPOSTO DE RENDA",
+      "natureza": "D",
+      "classif": "4.5.1.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "478",
+      "nome": "IRPJ",
+      "natureza": "D",
+      "classif": "4.5.1.01.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "833",
+      "nome": "PROVISAO PARA CONTRIBUICAO SOCIAL",
+      "natureza": "D",
+      "classif": "4.5.1.02",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "477",
+      "nome": "CSLL",
+      "natureza": "D",
+      "classif": "4.5.1.02.001",
+      "sintetica": false,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "460",
+      "nome": "CONTAS DE APURACAO",
+      "natureza": "D",
+      "classif": "5",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "461",
+      "nome": "CONTAS DE APURACAO",
+      "natureza": "D",
+      "classif": "5.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "471",
+      "nome": "APURACAO DO RESULTADO DO EXERCICIO",
+      "natureza": "D",
+      "classif": "5.1.1",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "472",
+      "nome": "APURACAO DO RESULTADO DO EXERCICIO",
+      "natureza": "D",
+      "classif": "5.1.1.01",
+      "sintetica": true,
+      "cnpj": null
+    },
+    {
+      "cod_reduzido": "473",
+      "nome": "RESULTADO DO EXERCICIO",
+      "natureza": "D",
+      "classif": "5.1.1.01.001",
+      "sintetica": false,
+      "cnpj": null
+    }
+  ]
+}

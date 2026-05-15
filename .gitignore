@@ -16,6 +16,8 @@ venv/
 /output/
 data/*.json
 !data/*example*.json
+!data/config_alo_embalagens.json
+!data/plano_contas_alo_embalagens.json
 
 # OS
 .DS_Store

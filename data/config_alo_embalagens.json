@@ -1,0 +1,22 @@
+{
+  "empresa_cnpj": "04744695000177",
+  "empresa_nome": "ALO EMBALAGENS LTDA",
+  "cod_banco_principal": "1843",
+  "cod_banco_sicoob": "8",
+  "cod_banco_bb": "1831",
+  "cod_contamax": "11",
+  "cod_tarifas": "374",
+  "cod_iof": "350",
+  "cod_receita_cartao": "504",
+  "cod_receita_pix": "504",
+  "cod_despesa_pix": "165",
+  "cod_debito_automatico": "51",
+  "cod_darf": "350",
+  "cod_tributo_estadual": "172",
+  "cod_energia": "354",
+  "cod_agua": "355",
+  "cod_telefone": "356",
+  "cod_salario": "187",
+  "cod_juros": "368",
+  "cod_receitas_financeiras": "432"
+}
