@@ -52,19 +52,22 @@ _CONFIG_PATH = DATA_DIR / "config_alo_embalagens.json"
 _PLANO_PATH  = DATA_DIR / "plano_contas_alo_embalagens.json"
 
 
-def _load_session():
+def _load_session(tenant_id: str | None = None):
     if _session.get("loaded"):
         return
+
+    # PRIME_TENANT_ID é fallback para dev local antes de Auth0 Action configurada.
+    effective_tenant = tenant_id or PRIME_TENANT_ID
 
     # Tenta PostgreSQL primeiro
     if os.getenv("LINCIUM_DB_URL"):
         try:
             from ..db import repository as db_repo
-            result = db_repo.load_latest_batch(PRIME_TENANT_ID)
+            result = db_repo.load_latest_batch(effective_tenant)
             if result:
                 batch_id, client_cnpj, client_name, period_label, results = result
                 _session["batch_id"]    = batch_id
-                _session["tenant_id"]   = PRIME_TENANT_ID
+                _session["tenant_id"]   = effective_tenant
                 _session["client_cnpj"] = client_cnpj
                 _session["client_name"] = client_name
                 _session["period"]      = period_label
@@ -125,7 +128,8 @@ def _ctx(request: Request, extra: dict) -> dict:
 
 @app.get("/", response_class=HTMLResponse)
 async def queue(request: Request):
-    _load_session()
+    tenant_id = request.session.get("user", {}).get("tenant_id")
+    _load_session(tenant_id)
     if _session.get("error"):
         return templates.TemplateResponse(request, "error.html", _ctx(request, {
             "message": _session["error"],
