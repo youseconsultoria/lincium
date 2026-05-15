@@ -34,7 +34,8 @@ async def callback_route(request: Request):
     # Move o custom claim para a chave curta "tenant_id" na sessão.
     userinfo["tenant_id"] = userinfo.pop(TENANT_CLAIM, None)
     request.session["user"] = userinfo
-    return RedirectResponse(url="/")
+    next_url = request.session.pop("next", "/")
+    return RedirectResponse(url=next_url)
 
 
 async def logout_route(request: Request):
@@ -49,8 +50,9 @@ class AuthMiddleware(BaseHTTPMiddleware):
 
     async def dispatch(self, request: Request, call_next):
         path = request.url.path
-        if path in self._PUBLIC or path.startswith("/static"):
+        if path in self._PUBLIC or path.startswith("/static") or path.startswith("/app/assets"):
             return await call_next(request)
         if not request.session.get("user"):
+            request.session["next"] = path
             return RedirectResponse(url="/login")
         return await call_next(request)
