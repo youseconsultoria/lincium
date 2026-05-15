@@ -9,7 +9,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 AUTH0_DOMAIN = os.getenv("AUTH0_DOMAIN", "")
 AUTH0_CLIENT_ID = os.getenv("AUTH0_CLIENT_ID", "")
 AUTH0_CLIENT_SECRET = os.getenv("AUTH0_CLIENT_SECRET", "")
-AUTH0_CALLBACK_URL = os.getenv("AUTH0_CALLBACK_URL", "http://localhost:8001/callback")
+AUTH0_CALLBACK_URL = os.getenv("AUTH0_CALLBACK_URL", "http://localhost:8000/callback")
 
 oauth = OAuth()
 oauth.register(

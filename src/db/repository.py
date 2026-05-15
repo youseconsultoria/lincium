@@ -2,9 +2,13 @@
 Operações de banco de dados do Lincium.
 
 Tabelas:
+  tenants      — um registro por escritório (tenant)
   batches      — um registro por run do pipeline (cliente × mês × banco)
   transactions — um registro por MatchResult dentro do batch
   learning     — decisões humanas acumuladas para melhorar o matching futuro
+
+Todas as operações filtram por tenant_id.
+PRIME_TENANT_ID é temporário — Slice C (Auth0) vai carregar o tenant da sessão.
 """
 
 import uuid
@@ -17,32 +21,46 @@ from ..matching.engine import MatchResult
 from ..models import Comprovante, Transaction
 from .connection import get_connection
 
+# UUID fixo do tenant piloto (PRIME Contabilidade).
+# Substituído por Auth0 app_metadata.tenant_id no Slice C.
+PRIME_TENANT_ID = "00000000-0000-0000-0000-000000000001"
 
 _SCHEMA = """
+CREATE TABLE IF NOT EXISTS tenants (
+    id          UUID         PRIMARY KEY DEFAULT gen_random_uuid(),
+    name        VARCHAR(200) NOT NULL,
+    cnpj        VARCHAR(18),
+    created_at  TIMESTAMPTZ  NOT NULL DEFAULT NOW(),
+    active      BOOLEAN      NOT NULL DEFAULT TRUE
+);
+
 CREATE TABLE IF NOT EXISTS batches (
-    id              UUID        PRIMARY KEY,
-    client_cnpj     VARCHAR(18) NOT NULL,
-    client_name     VARCHAR(200) NOT NULL,
-    bank            VARCHAR(50) NOT NULL DEFAULT 'santander',
-    period_year     SMALLINT    NOT NULL,
-    period_month    SMALLINT    NOT NULL,
-    created_at      TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    total_tx        INTEGER     NOT NULL DEFAULT 0,
-    auto_matched    INTEGER     NOT NULL DEFAULT 0,
-    needs_review_count INTEGER  NOT NULL DEFAULT 0,
-    status          VARCHAR(20) NOT NULL DEFAULT 'pending_review',
-    UNIQUE (client_cnpj, period_year, period_month, bank)
+    id                 UUID         PRIMARY KEY,
+    tenant_id          UUID         NOT NULL REFERENCES tenants(id),
+    client_cnpj        VARCHAR(18)  NOT NULL,
+    client_name        VARCHAR(200) NOT NULL,
+    bank               VARCHAR(50)  NOT NULL DEFAULT 'santander',
+    period_year        SMALLINT     NOT NULL,
+    period_month       SMALLINT     NOT NULL,
+    created_at         TIMESTAMPTZ  NOT NULL DEFAULT NOW(),
+    total_tx           INTEGER      NOT NULL DEFAULT 0,
+    auto_matched       INTEGER      NOT NULL DEFAULT 0,
+    needs_review_count INTEGER      NOT NULL DEFAULT 0,
+    status             VARCHAR(20)  NOT NULL DEFAULT 'pending_review',
+    CONSTRAINT batches_unique_per_tenant
+        UNIQUE (tenant_id, client_cnpj, period_year, period_month, bank)
 );
 
 CREATE TABLE IF NOT EXISTS transactions (
-    id              BIGSERIAL   PRIMARY KEY,
-    batch_id        UUID        NOT NULL REFERENCES batches(id) ON DELETE CASCADE,
-    tx_date         DATE        NOT NULL,
-    raw_description TEXT        NOT NULL,
+    id              BIGSERIAL    PRIMARY KEY,
+    tenant_id       UUID         NOT NULL REFERENCES tenants(id),
+    batch_id        UUID         NOT NULL REFERENCES batches(id) ON DELETE CASCADE,
+    tx_date         DATE         NOT NULL,
+    raw_description TEXT         NOT NULL,
     beneficiary     TEXT,
     doc_number      TEXT,
     amount          NUMERIC(15,2) NOT NULL,
-    is_debit        BOOLEAN     NOT NULL,
+    is_debit        BOOLEAN      NOT NULL,
     source          VARCHAR(50),
     comp_cnpj       VARCHAR(18),
     comp_name       TEXT,
@@ -50,33 +68,45 @@ CREATE TABLE IF NOT EXISTS transactions (
     cod_deb         VARCHAR(20),
     cod_cred        VARCHAR(20),
     historico       TEXT,
-    score           SMALLINT    NOT NULL DEFAULT 0,
-    match_type      VARCHAR(30) NOT NULL DEFAULT 'unmatched',
-    needs_review    BOOLEAN     NOT NULL DEFAULT TRUE,
+    score           SMALLINT     NOT NULL DEFAULT 0,
+    match_type      VARCHAR(30)  NOT NULL DEFAULT 'unmatched',
+    needs_review    BOOLEAN      NOT NULL DEFAULT TRUE,
     review_reason   TEXT,
     reviewed_at     TIMESTAMPTZ,
     reviewed_by     TEXT
 );
 
-CREATE INDEX IF NOT EXISTS idx_tx_batch    ON transactions(batch_id);
-CREATE INDEX IF NOT EXISTS idx_tx_review   ON transactions(batch_id, needs_review);
+CREATE INDEX IF NOT EXISTS idx_tx_batch        ON transactions(batch_id);
+CREATE INDEX IF NOT EXISTS idx_tx_review       ON transactions(batch_id, needs_review);
+CREATE INDEX IF NOT EXISTS idx_batch_tenant    ON batches(tenant_id);
+CREATE INDEX IF NOT EXISTS idx_tx_tenant       ON transactions(tenant_id);
 
 CREATE TABLE IF NOT EXISTS learning (
-    id              BIGSERIAL   PRIMARY KEY,
-    client_cnpj     VARCHAR(18) NOT NULL,
-    raw_description TEXT        NOT NULL,
-    beneficiary     TEXT        NOT NULL DEFAULT '',
-    cod_deb         VARCHAR(20) NOT NULL,
-    cod_cred        VARCHAR(20) NOT NULL,
-    decision_count  INTEGER     NOT NULL DEFAULT 1,
-    last_seen       TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    UNIQUE (client_cnpj, raw_description, beneficiary)
+    id              BIGSERIAL    PRIMARY KEY,
+    tenant_id       UUID         NOT NULL REFERENCES tenants(id),
+    client_cnpj     VARCHAR(18)  NOT NULL,
+    raw_description TEXT         NOT NULL,
+    beneficiary     TEXT         NOT NULL DEFAULT '',
+    cod_deb         VARCHAR(20)  NOT NULL,
+    cod_cred        VARCHAR(20)  NOT NULL,
+    decision_count  INTEGER      NOT NULL DEFAULT 1,
+    last_seen       TIMESTAMPTZ  NOT NULL DEFAULT NOW(),
+    CONSTRAINT learning_unique_per_tenant
+        UNIQUE (tenant_id, client_cnpj, raw_description, beneficiary)
 );
+
+CREATE INDEX IF NOT EXISTS idx_learning_tenant ON learning(tenant_id);
 """
 
 
 def _ensure_schema(cur) -> None:
     cur.execute(_SCHEMA)
+    # Garante que o tenant PRIME existe em deploys frescos (antes do Slice C).
+    cur.execute("""
+        INSERT INTO tenants (id, name, cnpj)
+        VALUES (%s, 'PRIME Contabilidade', NULL)
+        ON CONFLICT (id) DO NOTHING
+    """, (PRIME_TENANT_ID,))
 
 
 # ---------------------------------------------------------------------------
@@ -85,6 +115,7 @@ def _ensure_schema(cur) -> None:
 
 def save_batch(
     results: list[MatchResult],
+    tenant_id: str,
     client_cnpj: str,
     client_name: str,
     period_year: int,
@@ -93,7 +124,7 @@ def save_batch(
 ) -> str:
     """
     Persiste um batch no PostgreSQL, substituindo qualquer batch anterior
-    do mesmo cliente/período/banco. Retorna o batch_id (UUID).
+    do mesmo tenant/cliente/período/banco. Retorna o batch_id (UUID).
     """
     batch_id = str(uuid.uuid4())
     auto_matched = sum(1 for r in results if not r.needs_review)
@@ -106,19 +137,19 @@ def save_batch(
             with conn.cursor() as cur:
                 _ensure_schema(cur)
 
-                # Substitui batch existente para o mesmo cliente/período/banco
                 cur.execute(
-                    "DELETE FROM batches WHERE client_cnpj = %s AND period_year = %s"
-                    " AND period_month = %s AND bank = %s",
-                    (client_cnpj, period_year, period_month, bank),
+                    "DELETE FROM batches WHERE tenant_id = %s AND client_cnpj = %s"
+                    " AND period_year = %s AND period_month = %s AND bank = %s",
+                    (tenant_id, client_cnpj, period_year, period_month, bank),
                 )
 
                 cur.execute(
                     """INSERT INTO batches
-                       (id, client_cnpj, client_name, bank, period_year, period_month,
+                       (id, tenant_id, client_cnpj, client_name, bank,
+                        period_year, period_month,
                         total_tx, auto_matched, needs_review_count, status)
-                       VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
-                    (batch_id, client_cnpj, client_name, bank,
+                       VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
+                    (batch_id, tenant_id, client_cnpj, client_name, bank,
                      period_year, period_month,
                      len(results), auto_matched, needs_review_count, status),
                 )
@@ -128,6 +159,7 @@ def save_batch(
                     tx = r.transaction
                     comp = r.matched_comprovante
                     rows.append((
+                        tenant_id,
                         batch_id,
                         tx.date,
                         tx.raw_description,
@@ -150,7 +182,8 @@ def save_batch(
 
                 execute_values(cur, """
                     INSERT INTO transactions (
-                        batch_id, tx_date, raw_description, beneficiary, doc_number,
+                        tenant_id, batch_id,
+                        tx_date, raw_description, beneficiary, doc_number,
                         amount, is_debit, source,
                         comp_cnpj, comp_name, comp_amount,
                         cod_deb, cod_cred, historico, score, match_type,
@@ -205,7 +238,6 @@ def update_reviewed(
                     ))
                     updated += cur.rowcount
 
-                # Fecha o batch se não há mais pendências
                 cur.execute(
                     "SELECT COUNT(*) AS cnt FROM transactions"
                     " WHERE batch_id = %s AND needs_review = TRUE",
@@ -223,13 +255,13 @@ def update_reviewed(
 
 
 def save_learning(
+    tenant_id: str,
     client_cnpj: str,
     confirmed: dict[str, dict],
 ) -> None:
     """
-    Faz upsert das decisões humanas na tabela de aprendizado.
-    Cada confirmação incrementa decision_count — usada futuramente para
-    melhorar o matching automático.
+    Faz upsert das decisões humanas na tabela de aprendizado, por tenant.
+    Cada confirmação incrementa decision_count.
     """
     conn = get_connection()
     try:
@@ -243,17 +275,17 @@ def save_learning(
 
                     cur.execute("""
                         INSERT INTO learning
-                            (client_cnpj, raw_description, beneficiary,
+                            (tenant_id, client_cnpj, raw_description, beneficiary,
                              cod_deb, cod_cred, last_seen)
-                        VALUES (%s, %s, %s, %s, %s, %s)
-                        ON CONFLICT (client_cnpj, raw_description, beneficiary)
+                        VALUES (%s, %s, %s, %s, %s, %s, %s)
+                        ON CONFLICT (tenant_id, client_cnpj, raw_description, beneficiary)
                         DO UPDATE SET
                             cod_deb        = EXCLUDED.cod_deb,
                             cod_cred       = EXCLUDED.cod_cred,
                             decision_count = learning.decision_count + 1,
                             last_seen      = EXCLUDED.last_seen
                     """, (
-                        client_cnpj, raw_desc, beneficiary,
+                        tenant_id, client_cnpj, raw_desc, beneficiary,
                         codes["cod_deb"], codes["cod_cred"], now,
                     ))
     finally:
@@ -271,9 +303,9 @@ _PT_MONTHS = {
 }
 
 
-def load_latest_batch() -> tuple[str, str, str, str, list[MatchResult]] | None:
+def load_latest_batch(tenant_id: str) -> tuple[str, str, str, str, list[MatchResult]] | None:
     """
-    Carrega o batch mais recente do PostgreSQL.
+    Carrega o batch mais recente do tenant no PostgreSQL.
     Retorna (batch_id, client_cnpj, client_name, period_label, results)
     ou None se não houver nenhum batch.
     """
@@ -283,7 +315,9 @@ def load_latest_batch() -> tuple[str, str, str, str, list[MatchResult]] | None:
             _ensure_schema(cur)
 
             cur.execute(
-                "SELECT * FROM batches ORDER BY created_at DESC LIMIT 1"
+                "SELECT * FROM batches WHERE tenant_id = %s"
+                " ORDER BY created_at DESC LIMIT 1",
+                (tenant_id,),
             )
             batch = cur.fetchone()
             if not batch:

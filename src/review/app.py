@@ -16,6 +16,7 @@ from ..matching.rules import EmpresaConfig
 from ..output.batch import load_batch, save_batch
 from ..output.dominio import generate
 from .auth import AuthMiddleware, callback_route, login_route, logout_route
+from ..db.repository import PRIME_TENANT_ID
 
 BASE_DIR = Path(__file__).parent
 TEMPLATES_DIR = BASE_DIR / "templates"
@@ -59,10 +60,11 @@ def _load_session():
     if os.getenv("LINCIUM_DB_URL"):
         try:
             from ..db import repository as db_repo
-            result = db_repo.load_latest_batch()
+            result = db_repo.load_latest_batch(PRIME_TENANT_ID)
             if result:
                 batch_id, client_cnpj, client_name, period_label, results = result
                 _session["batch_id"]    = batch_id
+                _session["tenant_id"]   = PRIME_TENANT_ID
                 _session["client_cnpj"] = client_cnpj
                 _session["client_name"] = client_name
                 _session["period"]      = period_label
@@ -180,7 +182,7 @@ async def confirm(request: Request):
             from ..db import repository as db_repo
             user_email = request.session.get("user", {}).get("email")
             db_repo.update_reviewed(batch_id, confirmed, reviewed_by=user_email)
-            db_repo.save_learning(_session["config"].empresa_cnpj, confirmed)
+            db_repo.save_learning(_session["tenant_id"], _session["config"].empresa_cnpj, confirmed)
         except Exception:
             pass  # DB indisponível não bloqueia o fluxo
 

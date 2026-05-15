@@ -57,6 +57,7 @@ def run_pipeline(extrato_path: Path) -> int:
         if db_available():
             batch_id = db_repo.save_batch(
                 results,
+                tenant_id=db_repo.PRIME_TENANT_ID,
                 client_cnpj=cfg.empresa_cnpj,
                 client_name="ALO EMBALAGENS LTDA",
                 period_year=2026,
