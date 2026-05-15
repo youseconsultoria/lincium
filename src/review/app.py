@@ -215,10 +215,13 @@ async def confirm(request: Request):
 @app.get("/dbstatus")
 async def dbstatus():
     import traceback
+    lines = []
     db_url = os.getenv("LINCIUM_DB_URL")
     if not db_url:
         return HTMLResponse("LINCIUM_DB_URL não configurado", status_code=200)
-    masked = db_url[:30] + "..." if len(db_url) > 30 else db_url
+    masked = db_url[:30] + "..."
+    lines.append(f"LINCIUM_DB_URL: {masked}")
+
     try:
         from ..db.connection import get_connection
         conn = get_connection()
@@ -226,9 +229,22 @@ async def dbstatus():
             cur.execute("SELECT COUNT(*) AS cnt FROM batches")
             cnt = cur.fetchone()["cnt"]
         conn.close()
-        return HTMLResponse(f"OK — URL: {masked} | batches: {cnt}", status_code=200)
+        lines.append(f"conexao: OK | batches: {cnt}")
     except Exception:
-        return HTMLResponse(f"ERRO — URL: {masked}\n{traceback.format_exc()}", status_code=200)
+        lines.append(f"conexao: ERRO\n{traceback.format_exc()}")
+
+    try:
+        from ..db import repository as db_repo
+        result = db_repo.load_latest_batch()
+        if result:
+            batch_id, client_cnpj, client_name, period_label, results = result
+            lines.append(f"load_latest_batch: OK | {client_name} {period_label} | {len(results)} tx")
+        else:
+            lines.append("load_latest_batch: retornou None")
+    except Exception:
+        lines.append(f"load_latest_batch: ERRO\n{traceback.format_exc()}")
+
+    return HTMLResponse("<pre>" + "\n".join(lines) + "</pre>", status_code=200)
 
 
 @app.get("/download")
