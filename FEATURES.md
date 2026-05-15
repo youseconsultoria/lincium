@@ -13,6 +13,7 @@ Rastreamento de features por módulo. Status: ✅ Pronto | 🟡 Em andamento | �
 | Azure App Service deploy | ✅ | GitHub Actions automático |
 | PostgreSQL Azure | ✅ | `lincium-db` — tabelas: batches, transactions, learning |
 | Multi-tenancy (tenant_id) | ✅ | DB migrado, tenant_id em todas as tabelas, PRIME como piloto |
+| Auth0 Action (tenant_id claim) | ✅ | Post Login injeta tenant_id no JWT via app_metadata |
 | Auth0 SPA Application (PKCE) | 🔴 | Necessário para React hub |
 | React frontend scaffold | 🔴 | Vite + JS, servido pelo FastAPI |
 | `/api/v1/me` endpoint JWT | 🔴 | Primeira fatia do hub |
