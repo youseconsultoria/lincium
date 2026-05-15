@@ -22,6 +22,7 @@ BASE_DIR = Path(__file__).parent
 TEMPLATES_DIR = BASE_DIR / "templates"
 DATA_DIR = Path(__file__).parent.parent.parent / "data"
 OUTPUT_DIR = Path(__file__).parent.parent.parent / "output"
+FRONTEND_DIST = Path(__file__).parent.parent.parent / "frontend" / "dist"
 
 app = FastAPI(title="Lincium")
 
@@ -31,6 +32,14 @@ app.add_middleware(SessionMiddleware, secret_key=os.getenv("SECRET_KEY", "dev-on
 
 templates = Jinja2Templates(directory=str(TEMPLATES_DIR))
 app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static")
+
+# React hub — assets buildados pelo Vite em frontend/dist/assets/
+if (FRONTEND_DIST / "assets").exists():
+    app.mount(
+        "/app/assets",
+        StaticFiles(directory=str(FRONTEND_DIST / "assets")),
+        name="react-assets",
+    )
 
 # Rotas de autenticação
 app.add_route("/login", login_route)
@@ -241,3 +250,25 @@ async def download():
         media_type="text/plain",
         headers={"Content-Disposition": "attachment; filename=importacao.txt"},
     )
+
+
+# ---------------------------------------------------------------------------
+# React Hub — SPA catch-all (deve ser o último bloco de rotas)
+# Retorna index.html para qualquer /app/* — o React Router resolve internamente.
+# Os assets (/app/assets/*) são servidos pelo mount acima e chegam aqui
+# apenas se o mount ainda não existir (build ausente).
+# ---------------------------------------------------------------------------
+
+async def _react_hub(request: Request, full_path: str = ""):
+    index = FRONTEND_DIST / "index.html"
+    if index.exists():
+        return FileResponse(str(index))
+    return HTMLResponse(
+        "<p style='font-family:monospace;padding:2rem'>"
+        "Frontend não buildado. Execute: <code>cd frontend && npm install && npm run build</code>"
+        "</p>",
+        status_code=503,
+    )
+
+app.add_api_route("/app", _react_hub, response_class=HTMLResponse)
+app.add_api_route("/app/{full_path:path}", _react_hub, response_class=HTMLResponse)
