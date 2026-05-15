@@ -13,6 +13,9 @@ import sys
 import webbrowser
 from pathlib import Path
 
+from dotenv import load_dotenv
+load_dotenv()
+
 ROOT = Path(__file__).parent
 DATA_DIR = ROOT / "data"
 OUTPUT_DIR = ROOT / "output"
@@ -47,6 +50,21 @@ def run_pipeline(extrato_path: Path) -> int:
     save_batch(results, OUTPUT_DIR / "batch_latest.json")
     generate(results, cfg.empresa_cnpj, output_path=OUTPUT_DIR / "alo_embalagens_01_2026_importacao.txt")
     print(f"      Salvo em {OUTPUT_DIR}/")
+
+    try:
+        from src.db.connection import db_available
+        from src.db import repository as db_repo
+        if db_available():
+            batch_id = db_repo.save_batch(
+                results,
+                client_cnpj=cfg.empresa_cnpj,
+                client_name="ALO EMBALAGENS LTDA",
+                period_year=2026,
+                period_month=1,
+            )
+            print(f"      PostgreSQL: batch {batch_id[:8]}... salvo")
+    except Exception as e:
+        print(f"      PostgreSQL indisponível: {e}")
 
     return stats["needs_review"]
 

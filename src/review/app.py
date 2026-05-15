@@ -1,15 +1,12 @@
-import json
 import os
-from collections import defaultdict
 from decimal import Decimal
 from pathlib import Path
-from typing import Optional
 
 from dotenv import load_dotenv
 load_dotenv()
 
-from fastapi import FastAPI, Form, Request
-from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
+from fastapi import FastAPI, Request
+from fastapi.responses import FileResponse, HTMLResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.sessions import SessionMiddleware
@@ -50,24 +47,46 @@ templates.env.filters["brl"] = _fmt_brl_filter
 # Estado da sessão em memória (suficiente para uso single-user)
 _session: dict = {}
 
+_CONFIG_PATH = DATA_DIR / "config_alo_embalagens.json"
+_PLANO_PATH  = DATA_DIR / "plano_contas_alo_embalagens.json"
+
 
 def _load_session():
     if _session.get("loaded"):
         return
 
+    # Tenta PostgreSQL primeiro
+    if os.getenv("LINCIUM_DB_URL"):
+        try:
+            from ..db import repository as db_repo
+            result = db_repo.load_latest_batch()
+            if result:
+                batch_id, client_cnpj, client_name, period_label, results = result
+                _session["batch_id"]    = batch_id
+                _session["client_cnpj"] = client_cnpj
+                _session["client_name"] = client_name
+                _session["period"]      = period_label
+                _session["results"]     = results
+                _session["config"]      = EmpresaConfig.from_json(_CONFIG_PATH)
+                _session["plano"]       = PlanoDeContas.from_json(_PLANO_PATH)
+                _session["loaded"]      = True
+                return
+        except Exception:
+            pass  # cai no fallback local
+
+    # Fallback: JSON local (dev sem DB ou Azure sem dados ainda)
     batch_path = OUTPUT_DIR / "batch_latest.json"
     if not batch_path.exists():
         _session["error"] = "Nenhum batch encontrado. Rode o pipeline primeiro."
         _session["loaded"] = True
         return
 
-    _session["results"] = load_batch(batch_path)
-
-    config_path = DATA_DIR / "config_alo_embalagens.json"
-    plano_path = DATA_DIR / "plano_contas_alo_embalagens.json"
-    _session["config"] = EmpresaConfig.from_json(config_path)
-    _session["plano"] = PlanoDeContas.from_json(plano_path)
-    _session["loaded"] = True
+    _session["results"]     = load_batch(batch_path)
+    _session["client_name"] = "ALO EMBALAGENS LTDA"
+    _session["period"]      = "Janeiro/2026"
+    _session["config"]      = EmpresaConfig.from_json(_CONFIG_PATH)
+    _session["plano"]       = PlanoDeContas.from_json(_PLANO_PATH)
+    _session["loaded"]      = True
 
 
 def _group_for_review(results) -> list[dict]:
@@ -124,8 +143,8 @@ async def queue(request: Request):
         "auto_count": auto,
         "review_count": len(groups),
         "total_count": total,
-        "empresa": "ALO EMBALAGENS LTDA",
-        "periodo": "Janeiro/2026",
+        "empresa": _session.get("client_name", "ALO EMBALAGENS LTDA"),
+        "periodo": _session.get("period", "Janeiro/2026"),
     }))
 
 
@@ -154,12 +173,31 @@ async def confirm(request: Request):
             r.match_type = "human_review"
             updated += 1
 
-    save_batch(results, OUTPUT_DIR / "batch_latest.json")
+    # Persiste no DB se disponível
+    batch_id = _session.get("batch_id")
+    if batch_id and confirmed:
+        try:
+            from ..db import repository as db_repo
+            user_email = request.session.get("user", {}).get("email")
+            db_repo.update_reviewed(batch_id, confirmed, reviewed_by=user_email)
+            db_repo.save_learning(_session["config"].empresa_cnpj, confirmed)
+        except Exception:
+            pass  # DB indisponível não bloqueia o fluxo
+
+    # Salva localmente (fallback e dev)
+    try:
+        save_batch(results, OUTPUT_DIR / "batch_latest.json")
+    except Exception:
+        pass
+
     _session["loaded"] = False
 
     config = _session["config"]
     out_path = OUTPUT_DIR / "alo_embalagens_01_2026_importacao.txt"
-    generate(results, config.empresa_cnpj, output_path=str(out_path))
+    try:
+        generate(results, config.empresa_cnpj, output_path=str(out_path))
+    except Exception:
+        pass
 
     total_auto = sum(1 for r in results if not r.needs_review)
     remaining = sum(1 for r in results if r.needs_review)
@@ -168,19 +206,51 @@ async def confirm(request: Request):
         "updated": updated,
         "total_auto": total_auto,
         "remaining": remaining,
-        "download_ready": out_path.exists(),
-        "empresa": "ALO EMBALAGENS LTDA",
-        "periodo": "Janeiro/2026",
+        "download_ready": True,
+        "empresa": _session.get("client_name", "ALO EMBALAGENS LTDA"),
+        "periodo": _session.get("period", "Janeiro/2026"),
     }))
+
+
+@app.get("/dbstatus")
+async def dbstatus():
+    import traceback
+    db_url = os.getenv("LINCIUM_DB_URL")
+    if not db_url:
+        return HTMLResponse("LINCIUM_DB_URL não configurado", status_code=200)
+    masked = db_url[:30] + "..." if len(db_url) > 30 else db_url
+    try:
+        from ..db.connection import get_connection
+        conn = get_connection()
+        with conn.cursor() as cur:
+            cur.execute("SELECT COUNT(*) AS cnt FROM batches")
+            cnt = cur.fetchone()["cnt"]
+        conn.close()
+        return HTMLResponse(f"OK — URL: {masked} | batches: {cnt}", status_code=200)
+    except Exception:
+        return HTMLResponse(f"ERRO — URL: {masked}\n{traceback.format_exc()}", status_code=200)
 
 
 @app.get("/download")
 async def download():
+    results = _session.get("results")
+    config  = _session.get("config")
+    if not results or not config:
+        return HTMLResponse("Sem dados para download. Rode o pipeline primeiro.", status_code=404)
+
+    # Tenta servir o arquivo já gerado em disco
     path = OUTPUT_DIR / "alo_embalagens_01_2026_importacao.txt"
-    if not path.exists():
-        return HTMLResponse("Arquivo não encontrado. Confirme os lançamentos primeiro.", status_code=404)
-    return FileResponse(
-        path=str(path),
-        filename="alo_embalagens_01_2026_importacao.txt",
+    if path.exists():
+        return FileResponse(
+            path=str(path),
+            filename="alo_embalagens_01_2026_importacao.txt",
+            media_type="text/plain",
+        )
+
+    # Fallback: gera em memória (necessário no Azure onde o disco é efêmero)
+    content = generate(results, config.empresa_cnpj)
+    return Response(
+        content=content.encode("latin-1"),
         media_type="text/plain",
+        headers={"Content-Disposition": "attachment; filename=importacao.txt"},
     )
