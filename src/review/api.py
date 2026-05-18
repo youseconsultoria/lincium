@@ -67,7 +67,7 @@ def _get_tenant_name(tenant_id: str) -> str:
             with conn.cursor() as cur:
                 cur.execute("SELECT name FROM tenants WHERE id = %s", (tenant_id,))
                 row = cur.fetchone()
-                return row[0] if row else "Escritório"
+                return row['name'] if row else "Escritório"
     except Exception:
         return "Escritório"
 

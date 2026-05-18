@@ -54,11 +54,11 @@
   .group-select { width: 100%; cursor: pointer; }
 
   /* ─── Autocomplete ─── */
-  .ac-wrap { position: relative; flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 4px; }
+  .ac-wrap { flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 4px; }
   .ac-list {
-    position: absolute; top: 100%; left: 0; right: 0; z-index: 300;
+    position: fixed; z-index: 9999;
     background: var(--card); border: 1px solid var(--border);
-    border-radius: 8px; margin-top: 3px;
+    border-radius: 8px;
     max-height: 230px; overflow-y: auto;
     box-shadow: 0 8px 28px rgba(0,0,0,.5);
     display: none;
@@ -252,6 +252,55 @@
     </div>
     {% endfor %}
 
+    <!-- Lançamentos automáticos -->
+    {% if auto_results %}
+    <div style="margin-top: 32px;">
+      <div class="section-head">
+        <div>
+          <div class="section-title" style="cursor:pointer;" onclick="toggleAuto()">
+            ✓ Lançamentos Classificados Automaticamente
+            <span id="auto-toggle-icon" style="font-size:11px;color:var(--muted);margin-left:8px;">▶ mostrar</span>
+          </div>
+          <div class="section-subtitle">{{ auto_results|length }} lançamentos — conferência opcional antes de gerar o arquivo</div>
+        </div>
+      </div>
+      <div id="auto-section" style="display:none;">
+        <table class="tx-table" style="border:1px solid var(--border);border-radius:8px;overflow:hidden;">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Descrição</th>
+              <th>Beneficiário</th>
+              <th>Conta Débito</th>
+              <th>Conta Crédito</th>
+              <th>Tipo</th>
+              <th class="amount">Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for r in auto_results %}
+            <tr>
+              <td class="date">{{ r.transaction.date.strftime("%d/%m") }}</td>
+              <td style="max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{{ r.transaction.raw_description }}</td>
+              <td style="color:var(--muted);font-size:11px;">{{ r.transaction.beneficiary or "—" }}</td>
+              <td style="font-family:monospace;font-size:11px;color:var(--accent);">{{ r.cod_deb or "—" }}</td>
+              <td style="font-family:monospace;font-size:11px;color:var(--accent);">{{ r.cod_cred or "—" }}</td>
+              <td>
+                <span style="font-size:10px;padding:1px 6px;border-radius:3px;font-weight:700;
+                  background:{{ 'rgba(238,112,47,0.15)' if r.match_type == 'keyword' else 'rgba(45,212,191,0.12)' }};
+                  color:{{ 'var(--accent)' if r.match_type == 'keyword' else 'var(--success)' }};">
+                  {{ r.match_type }}
+                </span>
+              </td>
+              <td class="amount">{{ r.transaction.amount | brl }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+
     <!-- Footer -->
     <div class="footer-bar">
       <div class="footer-info" id="footer-info">
@@ -357,6 +406,11 @@ function acSetup() {
           selectConta(item.dataset.cod, item.dataset.nome);
         });
       });
+      // Posiciona como fixed abaixo do input (escapa do overflow:hidden do card)
+      const rect = input.getBoundingClientRect();
+      list.style.top   = rect.bottom + 'px';
+      list.style.left  = rect.left + 'px';
+      list.style.width = rect.width + 'px';
       list.style.display = 'block';
     }
 
@@ -404,6 +458,20 @@ function checkConfirmWord() {
 function submitForm() {
   document.getElementById('confirm-dialog').close();
   document.getElementById('review-form').submit();
+}
+
+// ─── Fecha dropdown ao rolar (posição fixed fica desalinhada ao scroll) ───
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.ac-list').forEach(l => l.style.display = 'none');
+}, true);
+
+// ─── Toggle lançamentos automáticos ───
+function toggleAuto() {
+  const sec  = document.getElementById('auto-section');
+  const icon = document.getElementById('auto-toggle-icon');
+  const open = sec.style.display === 'none';
+  sec.style.display  = open ? 'block' : 'none';
+  icon.textContent   = open ? '▼ ocultar' : '▶ mostrar';
 }
 
 // ─── Init ───

@@ -157,9 +157,15 @@ async def queue(request: Request):
         return [int(x) if x.isdigit() else 0 for x in parts] + [0] * (8 - len(parts))
     contas_all = sorted(plano._by_cod.values(), key=_classif_key)
 
+    auto_results = sorted(
+        [r for r in results if not r.needs_review],
+        key=lambda r: (r.cod_deb or r.cod_cred or "", r.transaction.date),
+    )
+
     return templates.TemplateResponse(request, "queue.html", _ctx(request, {
         "groups": groups,
         "contas": contas_all,
+        "auto_results": auto_results,
         "auto_count": auto,
         "review_count": len(groups),
         "total_count": total,
