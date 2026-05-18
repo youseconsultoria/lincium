@@ -13,7 +13,7 @@ createRoot(document.getElementById('root')).render(
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      authorizationParams={{ redirect_uri: callbackUrl }}
+      authorizationParams={{ redirect_uri: callbackUrl, audience: 'https://api.lincium.com.br' }}
     >
       <App />
     </Auth0Provider>

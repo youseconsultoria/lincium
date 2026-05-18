@@ -16,6 +16,7 @@ from ..matching.rules import EmpresaConfig
 from ..output.batch import load_batch, save_batch
 from ..output.dominio import generate
 from .auth import AuthMiddleware, callback_route, login_route, logout_route
+from .api import router as api_router
 from ..db.repository import PRIME_TENANT_ID
 
 BASE_DIR = Path(__file__).parent
@@ -41,6 +42,8 @@ if (FRONTEND_DIST / "assets").exists():
         name="react-assets",
     )
 
+app.include_router(api_router)
+
 # Rotas de autenticação
 app.add_route("/login", login_route)
 app.add_route("/callback", callback_route)
@@ -62,8 +65,7 @@ _PLANO_PATH  = DATA_DIR / "plano_contas_alo_embalagens.json"
 
 
 def _load_session(tenant_id: str | None = None):
-    if _session.get("loaded"):
-        return
+    _session.clear()
 
     # PRIME_TENANT_ID é fallback para dev local antes de Auth0 Action configurada.
     effective_tenant = tenant_id or PRIME_TENANT_ID
@@ -150,7 +152,10 @@ async def queue(request: Request):
 
     auto = sum(1 for r in results if not r.needs_review)
     total = len(results)
-    contas_all = sorted(plano._by_cod.values(), key=lambda e: e.cod_reduzido.zfill(6))
+    def _classif_key(e):
+        parts = (e.classif or '9.9.9.9.9').split('.')
+        return [int(x) if x.isdigit() else 0 for x in parts] + [0] * (8 - len(parts))
+    contas_all = sorted(plano._by_cod.values(), key=_classif_key)
 
     return templates.TemplateResponse(request, "queue.html", _ctx(request, {
         "groups": groups,

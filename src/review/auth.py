@@ -50,7 +50,7 @@ class AuthMiddleware(BaseHTTPMiddleware):
 
     async def dispatch(self, request: Request, call_next):
         path = request.url.path
-        if path in self._PUBLIC or path.startswith("/static") or path.startswith("/app/assets"):
+        if path in self._PUBLIC or path.startswith("/static") or path.startswith("/app/assets") or path.startswith("/api/"):
             return await call_next(request)
         if not request.session.get("user"):
             request.session["next"] = path

@@ -17,11 +17,25 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m venv antenv
           source antenv/bin/activate
           pip install -r requirements.txt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build React frontend
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+        env:
+          VITE_AUTH0_DOMAIN: lincium.us.auth0.com
+          VITE_AUTH0_CLIENT_ID: YucQ5NSK3hmnHREZas7DkRdbxbyjGuVy
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
