@@ -1,6 +1,6 @@
 # HANDOFF — Lincium Hub
-**Última atualização:** 2026-05-18
-**Sessão:** React Hub MVP completo + deploy em produção Azure
+**Última atualização:** 2026-05-18 (atualização 2)
+**Sessão:** React Hub MVP + home page com módulos + autocomplete melhorado + lançamentos automáticos
 
 ---
 
@@ -28,11 +28,18 @@ Construir o **Lincium Hub** — plataforma SaaS multi-tenant para escritórios d
 ### React Hub — MVP em produção
 - **Login**: tela com logo, "Lincium / Powered by EPrime", toggle dark/light, eslogan
 - **Sidebar**: ícones + Home + seção CONTÁBIL > Lançamentos de extratos + user info + logout na base
-- **Homepage**: fila de batches pendentes com cards (progresso, stats, "Ir para revisão"), histórico concluídos, botão "Nova conciliação"
+- **Home page**: grid de módulos dividido em "Em desenvolvimento" e "Em breve" — textos definitivos escolhidos por Matheus (ver abaixo)
+- **Lançamentos de extratos**: overview (batches pendentes + histórico) + "Nova conciliação" → upload → processamento → resultado
 - **Upload via web**: drag-and-drop multi-arquivo, detecção automática de tipo por nome do arquivo (Extrato Santander/BB/Sicoob, Comprovante Bradesco/Itaú, Plano de Contas .xlsx)
 - **Período automático**: detectado pelo Counter das datas das transações do extrato (sem input manual)
 - **Design system**: fonte Saira via `/static/fonts/Saira.ttf`, CSS custom properties, dark/light theme persistido em localStorage
 - **URL produção**: `https://app-lincium-gse4ahbaetf0h8gs.brazilsouth-01.azurewebsites.net/app`
+
+### Fila de revisão Jinja2 (melhorias desta sessão)
+- **Autocomplete de conta**: painel compartilhado (`position: fixed`) com header "Plano de contas" + search input interno — escapa do `overflow: hidden` do card
+- **Trigger button**: botão que exibe a conta selecionada, abre painel ao clicar, fecha ao clicar fora ou rolar
+- **Lançamentos automáticos**: seção colapsável no final da fila mostrando todos os 1608 lançamentos classificados automaticamente (conta débito, conta crédito, tipo de match, valor)
+- **Ordenação do plano**: hierarquia via campo `classif` (Ativo > Ativo Circulante > Caixa etc.)
 
 ### API React (`/api/v1/*`)
 - `GET /api/v1/me` — JWT Auth0 validado via python-jose + JWKS, retorna email + tenant_id + tenant_name
@@ -47,6 +54,25 @@ Construir o **Lincium Hub** — plataforma SaaS multi-tenant para escritórios d
 ---
 
 ## PRÓXIMA SESSÃO — Começar aqui
+
+### Textos definitivos da Home Page (para referência em futuras sessões)
+
+**Em desenvolvimento:**
+
+| Módulo | Texto |
+|--------|-------|
+| Conciliação Contábil | "Conciliação bancária com motor de matching inteligente. O sistema cruza extrato, comprovantes de pagamento, plano de contas, lançamentos passados e informações do XML para classificar cada transação automaticamente. A fila de revisão mostra apenas o que realmente precisa de atenção humana." |
+| IA Lincium | "IA contábil privada, custo fixo, zero exposição. Analise NFs, confira documentos, redija comunicados e responda dúvidas tributárias com inteligência artificial treinada no contexto contábil brasileiro — sem risco de vazamento de dados de clientes." |
+
+**Em breve:**
+
+| Módulo | Texto |
+|--------|-------|
+| Monitoramento de Convenções Coletivas e Dissídios | "Nunca mais perca um dissídio da sua carteira. O sistema monitora convenções coletivas de todos os seus clientes automaticamente, avisa quando uma nova é liberada e destaca quem está no período de risco do trintídio." |
+| Automação de Folha de Pagamento | "Confira uma folha de mil funcionários em menos de dois minutos. Importe movimentos de ponto, benefícios e comissões, e deixe o sistema auditar rubrica a rubrica — identificando inconsistências antes do fechamento." |
+| Integração com Plataforma de Customer Success | *(sem descrição — só o nome)* |
+
+---
 
 ### PASSO 1 — Corrigir o logo (15 min)
 O PNG do logo (`src/review/static/logo.png`) tem fundo cinza — `filter: brightness(0) invert(1)` faz o fundo virar branco, tornando o ícone invisível no círculo laranja. Por isso aparece o fallback "L".
