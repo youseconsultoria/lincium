@@ -110,8 +110,8 @@ function AppHeader({ theme, onToggleTheme }) {
 // ─── Sidebar ──────────────────────────────────────────────────────────────────
 
 const NAV_ITEMS = [
-  { id: 'home',    label: 'Home',                    Icon: IconHome,   section: null },
-  { id: '_sep1',   label: 'Contábil',                Icon: null,       section: 'CONTÁBIL' },
+  { id: 'extratos', label: 'Home',                    Icon: IconHome,   section: null },
+  { id: '_sep1',    label: 'Contábil',                Icon: null,       section: 'CONTÁBIL' },
   { id: 'extratos', label: 'Lançamentos de extratos', Icon: IconLayers, section: 'CONTÁBIL' },
 ]
 
@@ -218,7 +218,7 @@ function BatchCard({ batch, onNovo }) {
   )
 }
 
-function HomePage({ token, onNavigate }) {
+function OverviewView({ token, onNovo }) {
   const [batches, setBatches] = useState(null)
   const [loading, setLoading] = useState(true)
 
@@ -235,28 +235,31 @@ function HomePage({ token, onNavigate }) {
 
   return (
     <div style={{ maxWidth: 680, margin: '0 auto', padding: '2.5rem 2rem' }}>
-      <div style={{ marginBottom: '2rem' }}>
-        <p style={{ fontSize: '0.7rem', color: 'var(--dim)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.3rem' }}>Hub</p>
-        <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.3px' }}>Visão geral</h2>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2rem' }}>
+        <div>
+          <p style={{ fontSize: '0.7rem', color: 'var(--dim)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.3rem' }}>Contábil · Extratos</p>
+          <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.3px' }}>Lançamentos de Extratos</h2>
+        </div>
+        <button onClick={onNovo} style={{ ...s.btnPrimary, padding: '0.65rem 1.1rem', fontSize: '0.88rem' }}>
+          + Nova conciliação
+        </button>
       </div>
 
       {loading && <div style={{ display: 'flex', justifyContent: 'center', padding: '3rem' }}><Spinner size={32} /></div>}
 
       {!loading && pending.length === 0 && completed.length === 0 && (
-        <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--muted)' }}>
+        <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--muted)', border: '1px dashed var(--border)', borderRadius: 10 }}>
           <p style={{ fontSize: '0.9rem' }}>Nenhum processamento encontrado.</p>
-          <button onClick={() => onNavigate('extratos')} style={{ ...s.btnPrimary, marginTop: '1rem', padding: '0.65rem 1.25rem' }}>
-            Iniciar primeira conciliação →
-          </button>
+          <p style={{ fontSize: '0.8rem', marginTop: '0.3rem' }}>Clique em "Nova conciliação" para começar.</p>
         </div>
       )}
 
       {!loading && pending.length > 0 && (
-        <section style={{ marginBottom: '2.5rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+        <section style={{ marginBottom: '2rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.85rem' }}>
             <span style={{ color: '#f59e0b' }}><IconClock size={14} /></span>
-            <h3 style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Aguardando revisão</h3>
-            <span style={{ fontSize: '0.7rem', background: 'rgba(245,158,11,0.12)', color: '#f59e0b', padding: '0.15rem 0.5rem', borderRadius: 4, fontWeight: 700 }}>{pending.length}</span>
+            <h3 style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Aguardando revisão</h3>
+            <span style={{ fontSize: '0.68rem', background: 'rgba(245,158,11,0.12)', color: '#f59e0b', padding: '0.15rem 0.5rem', borderRadius: 4, fontWeight: 700 }}>{pending.length}</span>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             {pending.map(b => <BatchCard key={b.batch_id} batch={b} />)}
@@ -266,7 +269,7 @@ function HomePage({ token, onNavigate }) {
 
       {!loading && completed.length > 0 && (
         <section>
-          <h3 style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.75rem' }}>Histórico</h3>
+          <h3 style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.75rem' }}>Histórico</h3>
           <div style={{ background: 'var(--card)', border: '1px solid var(--border)', borderRadius: 10, overflow: 'hidden' }}>
             {completed.slice(0, 8).map((b, i) => {
               const periodo = b.period_month ? `${MESES[b.period_month - 1]}/${b.period_year}` : String(b.period_year)
@@ -287,12 +290,6 @@ function HomePage({ token, onNavigate }) {
           </div>
         </section>
       )}
-
-      <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border)' }}>
-        <button onClick={() => onNavigate('extratos')} style={{ ...s.btnPrimary, padding: '0.7rem 1.25rem', fontSize: '0.88rem' }}>
-          + Nova conciliação
-        </button>
-      </div>
     </div>
   )
 }
@@ -459,8 +456,8 @@ export default function App() {
   const [theme, toggleTheme] = useTheme()
   const [me,     setMe]    = useState(null)
   const [token,  setToken] = useState(null)
-  const [page,   setPage]  = useState('home')
-  const [view,   setView]  = useState('upload')
+  const [page,   setPage]  = useState('extratos')
+  const [view,   setView]  = useState('overview')
   const [result, setResult] = useState(null)
   const [error,  setError]  = useState(null)
 
@@ -493,14 +490,15 @@ export default function App() {
     } catch (err) { setError(err.message); setView('upload') }
   }
 
-  function navigate(p) { setPage(p); setView('upload'); setResult(null); setError(null) }
+  function navigate(p) { setPage(p); setView('overview'); setResult(null); setError(null) }
 
   const extratosContent =
+    view === 'overview'   ? <OverviewView token={token} onNovo={() => setView('upload')} /> :
     view === 'upload'     ? <UploadView onProcess={handleProcess} error={error} /> :
     view === 'processing' ? <ProcessingView /> :
     <ResultsView result={result}
       onNovo={() => { setView('upload'); setResult(null); setError(null) }}
-      onHome={() => { navigate('home') }} />
+      onHome={() => { setView('overview'); setResult(null); setError(null) }} />
 
   return (
     <div style={{ height: '100vh', background: 'var(--bg)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
@@ -508,7 +506,6 @@ export default function App() {
       <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
         <Sidebar page={page} onNavigate={navigate} me={me} onLogout={() => logout({ logoutParams: { returnTo: window.location.origin + '/app' } })} />
         <main style={{ flex: 1, overflowY: 'auto' }}>
-          {page === 'home'     && <HomePage token={token} onNavigate={navigate} />}
           {page === 'extratos' && extratosContent}
         </main>
       </div>
