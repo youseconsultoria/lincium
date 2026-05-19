@@ -110,7 +110,7 @@ function AppHeader({ theme, onToggleTheme }) {
 // ─── Sidebar ──────────────────────────────────────────────────────────────────
 
 const NAV_ITEMS = [
-  { id: 'extratos', label: 'Home',                    Icon: IconHome,   section: null },
+  { id: 'home',     label: 'Home',                    Icon: IconHome,   section: null },
   { id: '_sep1',    label: 'Contábil',                Icon: null,       section: 'CONTÁBIL' },
   { id: 'extratos', label: 'Lançamentos de extratos', Icon: IconLayers, section: 'CONTÁBIL' },
 ]
@@ -217,6 +217,93 @@ function BatchCard({ batch, onNovo }) {
     </div>
   )
 }
+
+// ─── Home ─────────────────────────────────────────────────────────────────────
+
+const MODULES = [
+  {
+    id: 'extratos',
+    label: 'Conciliação Contábil',
+    desc: 'Extrato bancário → matching automático → plano de contas → Domínio',
+    status: 'active',
+  },
+  {
+    id: null,
+    label: 'Departamento Pessoal',
+    desc: 'Folha de pagamento, dissídios, convenções coletivas, conferência automática',
+    status: 'dev',
+  },
+  {
+    id: null,
+    label: 'Fiscal',
+    desc: 'SPED, NF-e, obrigações acessórias, monitoramento SEFAZ',
+    status: 'dev',
+  },
+  {
+    id: null,
+    label: 'Societário',
+    desc: 'Alterações contratuais, atos societários, registro de sócios',
+    status: 'dev',
+  },
+  {
+    id: null,
+    label: 'IA Lincium',
+    desc: 'Assistente inteligente para análise de documentos e consultas contábeis',
+    status: 'dev',
+  },
+]
+
+function HomePage({ me, onNavigate }) {
+  const name = me?.email?.split('@')[0] || ''
+  return (
+    <div style={{ maxWidth: 760, margin: '0 auto', padding: '2.5rem 2rem' }}>
+      <div style={{ marginBottom: '2.5rem' }}>
+        <p style={{ fontSize: '0.7rem', color: 'var(--dim)', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.35rem' }}>Hub</p>
+        <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--text)', letterSpacing: '-0.3px' }}>
+          Olá{name ? `, ${name}` : ''}
+        </h2>
+        <p style={{ fontSize: '0.85rem', color: 'var(--muted)', marginTop: '0.3rem' }}>
+          {me?.tenant_name || 'PRIME Contabilidade'} — selecione um módulo para começar
+        </p>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '0.85rem' }}>
+        {MODULES.map(mod => (
+          <div
+            key={mod.label}
+            onClick={() => mod.id && onNavigate(mod.id)}
+            style={{
+              background: 'var(--card)',
+              border: `1px solid ${mod.status === 'active' ? 'var(--border)' : 'var(--border)'}`,
+              borderRadius: 10,
+              padding: '1.25rem 1.4rem',
+              cursor: mod.status === 'active' ? 'pointer' : 'default',
+              transition: 'border-color 0.15s, box-shadow 0.15s',
+              position: 'relative',
+              ...(mod.status === 'active' ? {} : { opacity: 0.6 }),
+            }}
+            onMouseEnter={e => { if (mod.id) { e.currentTarget.style.borderColor = 'var(--primary)'; e.currentTarget.style.boxShadow = '0 0 0 1px var(--primary-dim)' } }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.boxShadow = 'none' }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.6rem' }}>
+              <h3 style={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--text)' }}>{mod.label}</h3>
+              {mod.status === 'active'
+                ? <span style={{ fontSize: '0.62rem', fontWeight: 700, color: 'var(--success)', background: 'rgba(45,212,191,0.1)', padding: '0.2rem 0.55rem', borderRadius: 4, letterSpacing: '0.06em', flexShrink: 0, marginLeft: '0.5rem' }}>ATIVO</span>
+                : <span style={{ fontSize: '0.62rem', fontWeight: 700, color: 'var(--dim)', background: 'var(--surface)', padding: '0.2rem 0.55rem', borderRadius: 4, letterSpacing: '0.06em', flexShrink: 0, marginLeft: '0.5rem' }}>EM DESENVOLVIMENTO</span>
+              }
+            </div>
+            <p style={{ fontSize: '0.81rem', color: 'var(--muted)', lineHeight: 1.55 }}>{mod.desc}</p>
+            {mod.status === 'active' && (
+              <p style={{ fontSize: '0.75rem', color: 'var(--primary)', marginTop: '0.75rem', fontWeight: 600 }}>Acessar →</p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+// ─── Overview (extratos) ──────────────────────────────────────────────────────
 
 function OverviewView({ token, onNovo }) {
   const [batches, setBatches] = useState(null)
@@ -456,7 +543,7 @@ export default function App() {
   const [theme, toggleTheme] = useTheme()
   const [me,     setMe]    = useState(null)
   const [token,  setToken] = useState(null)
-  const [page,   setPage]  = useState('extratos')
+  const [page,   setPage]  = useState('home')
   const [view,   setView]  = useState('overview')
   const [result, setResult] = useState(null)
   const [error,  setError]  = useState(null)
@@ -506,6 +593,7 @@ export default function App() {
       <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
         <Sidebar page={page} onNavigate={navigate} me={me} onLogout={() => logout({ logoutParams: { returnTo: window.location.origin + '/app' } })} />
         <main style={{ flex: 1, overflowY: 'auto' }}>
+          {page === 'home'     && <HomePage me={me} onNavigate={navigate} />}
           {page === 'extratos' && extratosContent}
         </main>
       </div>
